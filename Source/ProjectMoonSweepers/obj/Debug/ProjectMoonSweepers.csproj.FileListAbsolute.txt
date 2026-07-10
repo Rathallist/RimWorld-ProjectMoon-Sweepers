@@ -1,9 +1,0 @@
-C:\Users\Raphaël\Desktop\ProjectMoon_Sweepers\Assemblies\ProjectMoonSweepers.dll
-C:\Users\Raphaël\Desktop\ProjectMoon_Sweepers\Assemblies\ProjectMoonSweepers.pdb
-C:\Users\Raphaël\Desktop\ProjectMoon_Sweepers\Source\ProjectMoonSweepers\obj\Debug\ProjectMoonSweepers.csproj.AssemblyReference.cache
-C:\Users\Raphaël\Desktop\ProjectMoon_Sweepers\Source\ProjectMoonSweepers\obj\Debug\ProjectMoonSweepers.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Raphaël\Desktop\ProjectMoon_Sweepers\Source\ProjectMoonSweepers\obj\Debug\ProjectMoonSweepers.AssemblyInfoInputs.cache
-C:\Users\Raphaël\Desktop\ProjectMoon_Sweepers\Source\ProjectMoonSweepers\obj\Debug\ProjectMoonSweepers.AssemblyInfo.cs
-C:\Users\Raphaël\Desktop\ProjectMoon_Sweepers\Source\ProjectMoonSweepers\obj\Debug\ProjectMoonSweepers.csproj.CoreCompileInputs.cache
-C:\Users\Raphaël\Desktop\ProjectMoon_Sweepers\Source\ProjectMoonSweepers\obj\Debug\ProjectMoonSweepers.dll
-C:\Users\Raphaël\Desktop\ProjectMoon_Sweepers\Source\ProjectMoonSweepers\obj\Debug\ProjectMoonSweepers.pdb
