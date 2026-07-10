@@ -2,6 +2,8 @@
 
 A [RimWorld](https://rimworldgame.com/) mod that adds the **Sweepers** from the Project Moon universe — humanoid entities whose bodies are made of **Vital Fuel**, a living red liquid contained within structural black suits.
 
+**Repository:** https://github.com/Rathallist/RimWorld-ProjectMoon-Sweepers
+
 > Fully playable in **English** and **French**.
 
 ---
