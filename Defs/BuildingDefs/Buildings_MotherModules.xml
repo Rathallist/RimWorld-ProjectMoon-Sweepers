@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- =====================================================================
+       MODULES DE LA MOTHER (facilities adjacentes, cumulables jusqu'à 3)
+       Chaque module se place à côté de la Mother et améliore sa production.
+       Le comptage/cumul est géré par le CompMother côté C#.
+  ===================================================================== -->
+
+  <!-- Base commune aux modules -->
+  <ThingDef Name="PM_MotherModuleBase" ParentName="BuildingBase" Abstract="True">
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <!-- Minifiable : installable/désinstallable et transportable. -->
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsProduction</li>
+    </thingCategories>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <blockWind>true</blockWind>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>true</useHitPoints>
+    <constructEffect>ConstructMetal</constructEffect>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <designationCategory>Production</designationCategory>
+    <selectable>true</selectable>
+    <madeFromStuff>false</madeFromStuff>
+    <rotatable>true</rotatable>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>4000</WorkToBuild>
+      <Flammability>0.5</Flammability>
+      <Beauty>-6</Beauty>
+    </statBases>
+    <size>(1, 1)</size>
+    <researchPrerequisites>
+      <li>PM_Research_MotherModules</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+  </ThingDef>
+
+  <!-- MODULE 1 : Gestation (vitesse) -->
+  <ThingDef ParentName="PM_MotherModuleBase">
+    <defName>PM_Module_Gestation</defName>
+    <label>module de gestation</label>
+    <description>Un module qui accélère les cycles de la Mother. Chaque module réduit le carburant nécessaire par cycle, produisant les Sweepers plus vite. Cumulable jusqu'à 3 sur une même Mother.</description>
+    <graphicData>
+      <texPath>Things/Building/PM_Module_Gestation</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1, 1)</drawSize>
+    </graphicData>
+    <costList>
+      <Steel>150</Steel>
+      <Plasteel>60</Plasteel>
+      <ComponentSpacer>2</ComponentSpacer>
+      <Gold>25</Gold>
+      <PM_RedLiquidResource>40</PM_RedLiquidResource>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Facility">
+        <maxSimultaneous>3</maxSimultaneous>
+        <maxDistance>3.9</maxDistance>
+        <mustBePlacedAdjacent>false</mustBePlacedAdjacent>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- MODULE 2 : Multiplication (nombre) -->
+  <ThingDef ParentName="PM_MotherModuleBase">
+    <defName>PM_Module_Multiplication</defName>
+    <label>module de multiplication</label>
+    <description>Un module qui permet à la Mother de produire plusieurs Sweepers par cycle. Chaque module ajoute un Sweeper supplémentaire produit à chaque cycle complet. Cumulable jusqu'à 3 sur une même Mother.</description>
+    <graphicData>
+      <texPath>Things/Building/PM_Module_Multiplication</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1, 1)</drawSize>
+    </graphicData>
+    <costList>
+      <Steel>200</Steel>
+      <Plasteel>90</Plasteel>
+      <ComponentSpacer>3</ComponentSpacer>
+      <Gold>40</Gold>
+      <PM_RedLiquidResource>60</PM_RedLiquidResource>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Facility">
+        <maxSimultaneous>3</maxSimultaneous>
+        <maxDistance>3.9</maxDistance>
+        <mustBePlacedAdjacent>false</mustBePlacedAdjacent>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- MODULE 3 : Amélioration (stats de départ) -->
+  <ThingDef ParentName="PM_MotherModuleBase">
+    <defName>PM_Module_Enhancement</defName>
+    <label>module d'amélioration</label>
+    <description>Un module qui affine le carburant vital injecté, produisant des Sweepers aux capacités supérieures. Chaque module augmente les compétences de départ des Sweepers produits. Cumulable jusqu'à 3 sur une même Mother.</description>
+    <graphicData>
+      <texPath>Things/Building/PM_Module_Enhancement</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1, 1)</drawSize>
+    </graphicData>
+    <costList>
+      <Steel>250</Steel>
+      <Plasteel>120</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+      <Gold>60</Gold>
+      <PM_RedLiquidResource>80</PM_RedLiquidResource>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Facility">
+        <maxSimultaneous>3</maxSimultaneous>
+        <maxDistance>3.9</maxDistance>
+        <mustBePlacedAdjacent>false</mustBePlacedAdjacent>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Pensée : carburant vital faible (mood négatif modéré) -->
+  <ThoughtDef>
+    <defName>PM_LowFuelMood</defName>
+    <durationDays>1.0</durationDays>
+    <stages>
+      <li>
+        <label>carburant vital faible</label>
+        <description>Mon carburant vital s'épuise. Je me sens vidé, instable, comme si mon être même se dissolvait lentement.</description>
+        <baseMoodEffect>-12</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Pensée : carburant vital critique (gros debuff mood) -->
+  <ThoughtDef>
+    <defName>PM_CriticalFuelMood</defName>
+    <durationDays>1.0</durationDays>
+    <stages>
+      <li>
+        <label>carburant vital critique</label>
+        <description>Je me dissous. Chaque instant sans carburant vital est une agonie froide — mon corps liquide se fige et mon esprit s'effrite.</description>
+        <baseMoodEffect>-30</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

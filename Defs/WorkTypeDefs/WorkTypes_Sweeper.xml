@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- WorkType dédié à l'alimentation en carburant vital.
+       alwaysStartActive + workTags vides = les Sweepers le font toujours,
+       comme un besoin vital, sans qu'on puisse le désactiver dans les priorités. -->
+  <WorkTypeDef>
+    <defName>PM_Sustenance</defName>
+    <labelShort>carburant</labelShort>
+    <pawnLabel>alimentation</pawnLabel>
+    <gerundLabel>alimentation en carburant</gerundLabel>
+    <description>S'alimenter en carburant vital aux robinets.</description>
+    <verb>s'alimenter</verb>
+    <naturalPriority>9999</naturalPriority>
+    <alwaysStartActive>true</alwaysStartActive>
+    <workTags>
+      <li>ManualDumb</li>
+    </workTags>
+  </WorkTypeDef>
+
+</Defs>

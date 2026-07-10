@@ -1,0 +1,62 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- RimWorld 1.6 tourne sur .NET Framework 4.8 -->
+    <TargetFramework>net48</TargetFramework>
+    <AssemblyName>ProjectMoonSweepers</AssemblyName>
+    <RootNamespace>ProjectMoonSweepers</RootNamespace>
+    <Nullable>enable</Nullable>
+    <LangVersion>9.0</LangVersion>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <Platforms>x64</Platforms>
+
+    <!-- DLL compilée directement dans Assemblies/ du mod -->
+    <OutputPath>..\..\Assemblies\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+  <!-- ================================================================
+       CHEMIN VERS Assembly-CSharp.dll de RimWorld
+       MODIFIER SI NÉCESSAIRE — doit pointer vers le dossier Managed/
+       Exemple : D:\SteamLibrary\steamapps\common\RimWorld\RimWorldWin64_Data\Managed
+  ================================================================ -->
+  <PropertyGroup>
+    <RimWorldManagedPath>D:\SteamLibrary\steamapps\common\RimWorld\RimWorldWin64_Data\Managed</RimWorldManagedPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- DLL principale du jeu (contient Verse, RimWorld, etc.) -->
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(RimWorldManagedPath)\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <!-- Unity Core -->
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(RimWorldManagedPath)\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>$(RimWorldManagedPath)\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>$(RimWorldManagedPath)\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <!-- Harmony — via NuGet, plus fiable que le chemin local -->
+    <!-- RimWorld embarque Harmony mais NuGet garantit la résolution au build -->
+    <Reference Include="0Harmony">
+      <HintPath>$(RimWorldManagedPath)\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <!-- Harmony via NuGet en fallback si la DLL locale est introuvable -->
+  <ItemGroup>
+    <PackageReference Include="Lib.Harmony" Version="2.3.3" ExcludeAssets="runtime" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Fragment de Sweeper = techprint qui débloque la recherche carburant vital.
+       Trouvable dans les labos abandonnés, quêtes, ou commerce.
+       S'applique au banc de recherche pour déverrouiller PM_Research_VitalFuel. -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>PM_SweeperFragment</defName>
+    <label>fragment de Sweeper</label>
+    <description>Un éclat d'armure noire encore imprégné de carburant vital cristallisé. Les veines rouges pulsent faiblement. Étudiez-le à un banc de recherche pour déverrouiller la recherche sur le carburant vital.</description>
+    <descriptionHyperlinks>
+      <ResearchProjectDef>PM_Research_VitalFuel</ResearchProjectDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/PM_SweeperFragment</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>3000</MarketValue>
+      <Mass>0.8</Mass>
+      <Flammability>0.2</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>Items</li>
+    </thingCategories>
+    <stackLimit>1</stackLimit>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="CompProperties_Techprint">
+        <project>PM_Research_VitalFuel</project>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

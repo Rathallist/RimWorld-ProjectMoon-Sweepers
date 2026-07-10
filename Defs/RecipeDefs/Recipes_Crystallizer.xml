@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Opération d'implantation du cristalliseur d'urgence.
+       surgerySuccessChanceFactor élevé + deathOnFailedSurgeryChance 0
+       = l'opération "ne peut pas rater" (comme demandé). -->
+  <RecipeDef>
+    <defName>PM_Surgery_InstallCrystallizer</defName>
+    <label>installer un cristalliseur d'urgence</label>
+    <description>Greffe un cristalliseur d'urgence sur une partie du corps. S'activera en cas de forte hémorragie.</description>
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <jobString>Installation d'un cristalliseur d'urgence.</jobString>
+    <workAmount>400</workAmount>
+    <surgerySuccessChanceFactor>99999</surgerySuccessChanceFactor>
+    <deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
+    <isViolation>false</isViolation>
+    <addsHediff>PM_CrystallizerImplant</addsHediff>
+    <anesthetize>false</anesthetize>
+    <recipeUsers>
+      <li>Human</li>
+    </recipeUsers>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+      <li>Neck</li>
+      <li>LeftLeg</li>
+      <li>RightLeg</li>
+      <li>LeftArm</li>
+      <li>RightArm</li>
+    </appliedOnFixedBodyParts>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>PM_EmergencyCrystallizer</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>PM_EmergencyCrystallizer</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <researchPrerequisite>PM_Research_SweeperAugments</researchPrerequisite>
+  </RecipeDef>
+
+</Defs>

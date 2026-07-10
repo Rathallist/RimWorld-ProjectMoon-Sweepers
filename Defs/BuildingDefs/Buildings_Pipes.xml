@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ===================================================================
+       TUYAU DE SANG VITAL
+       Connecte les bâtiments du réseau. Comme les conduits électriques.
+  =================================================================== -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>PM_BloodPipe</defName>
+    <tickerType>Normal</tickerType>
+    <label>tuyau de carburant vital</label>
+    <description>Un conduit qui transporte le Carburant Vital entre les bâtiments. Connecte Liquidifiers, réservoirs, robinets et la Mother en un réseau unique.</description>
+    <thingClass>ProjectMoonSweepers.Building_Pipe</thingClass>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Things/Building/PM_BloodPipe</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1, 1)</drawSize>
+    </graphicData>
+    <building>
+      <isInert>true</isInert>
+      <isEdifice>false</isEdifice>
+    </building>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <passability>Standable</passability>
+    <fillPercent>0</fillPercent>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>35</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <costList>
+      <Steel>1</Steel>
+    </costList>
+    <comps>
+      <li Class="ProjectMoonSweepers.CompProperties_PipeConnector"/>
+    </comps>
+    <designationCategory>Production</designationCategory>
+    <researchPrerequisites>
+      <li>PM_Research_VitalFuel</li>
+    </researchPrerequisites>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>false</neverMultiSelect>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+  </ThingDef>
+
+  <!-- ===================================================================
+       RÉSERVOIR DE SANG VITAL
+       Stocke le Carburant Vital du réseau.
+  =================================================================== -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>PM_BloodReservoir</defName>
+    <label>réservoir de carburant vital</label>
+    <description>Une cuve qui stocke le Carburant Vital du réseau. Plus vous en construisez, plus la capacité totale du réseau augmente.</description>
+    <thingClass>ProjectMoonSweepers.Building_Reservoir</thingClass>
+    <category>Building</category>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Building/PM_BloodReservoir</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2, 2)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.5</fillPercent>
+    <size>(2, 2)</size>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>2000</WorkToBuild>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <costList>
+      <Steel>80</Steel>
+    </costList>
+    <comps>
+      <li Class="ProjectMoonSweepers.CompProperties_PipeStorage">
+        <capacity>400</capacity>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(140, 15, 10, 0)</glowColor>
+      </li>
+      <li Class="ProjectMoonSweepers.CompProperties_PipeStubs"/>
+    </comps>
+    <designationCategory>Production</designationCategory>
+    <researchPrerequisites>
+      <li>PM_Research_VitalFuel</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+  <!-- ===================================================================
+       ROBINET DE SANG VITAL
+       Les Sweepers viennent y remplir leur jauge interne.
+  =================================================================== -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>PM_BloodTap</defName>
+    <label>robinet de carburant vital</label>
+    <description>Un point d'alimentation où les Sweepers peuvent recharger leur Carburant Vital interne en puisant dans le réseau. Indispensable pour maintenir vos Sweepers en vie sans combat.</description>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Things/Building/PM_BloodTap</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1, 1)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.4</fillPercent>
+    <size>(1, 1)</size>
+    <rotatable>true</rotatable>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0, 0, -1)</interactionCellOffset>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <WorkToBuild>800</WorkToBuild>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <costList>
+      <Steel>50</Steel>
+    </costList>
+    <comps>
+      <li Class="ProjectMoonSweepers.CompProperties_PipeTap"/>
+      <li Class="CompProperties_Glower">
+        <glowRadius>1.5</glowRadius>
+        <glowColor>(160, 20, 12, 0)</glowColor>
+      </li>
+      <li Class="ProjectMoonSweepers.CompProperties_PipeStubs"/>
+    </comps>
+    <designationCategory>Production</designationCategory>
+    <researchPrerequisites>
+      <li>PM_Research_VitalFuel</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+</Defs>

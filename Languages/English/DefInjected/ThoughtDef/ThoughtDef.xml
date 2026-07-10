@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PM_WitnessedLiquefaction.label>saw a corpse liquefied</PM_WitnessedLiquefaction.label>
+  <PM_LiquidReplenished.label>vital fuel recharged</PM_LiquidReplenished.label>
+  <PM_LiquidLow.label>low vital fuel</PM_LiquidLow.label>
+  <PM_NewSweeperBorn.label>new Sweeper incubated</PM_NewSweeperBorn.label>
+  <PM_DaylightDiscomfort.label>daylight</PM_DaylightDiscomfort.label>
+
+  <PM_CleanedFilth_Mood.stages.0.label>filth purged</PM_CleanedFilth_Mood.stages.0.label>
+  <PM_CleanedFilth_Mood.stages.0.description>I purged a little filth from the world. As it should be.</PM_CleanedFilth_Mood.stages.0.description>
+  <PM_Deconstructed_Mood.stages.0.label>refuse swept</PM_Deconstructed_Mood.stages.0.label>
+  <PM_Deconstructed_Mood.stages.0.description>I dismantled what needed to be. The Backstreets are a little cleaner.</PM_Deconstructed_Mood.stages.0.description>
+  <PM_FilthAround_Mood.stages.0.label>a hint of filth</PM_FilthAround_Mood.stages.0.label>
+  <PM_FilthAround_Mood.stages.0.description>There's a bit of filth here. It bothers me.</PM_FilthAround_Mood.stages.0.description>
+  <PM_FilthAround_Mood.stages.1.label>some filth</PM_FilthAround_Mood.stages.1.label>
+  <PM_FilthAround_Mood.stages.1.description>This place isn't clean. It's unpleasant.</PM_FilthAround_Mood.stages.1.description>
+  <PM_FilthAround_Mood.stages.2.label>repugnant filth</PM_FilthAround_Mood.stages.2.label>
+  <PM_FilthAround_Mood.stages.2.description>This place is dirty. It's an offense to my eyes.</PM_FilthAround_Mood.stages.2.description>
+  <PM_FilthAround_Mood.stages.3.label>pervasive grime</PM_FilthAround_Mood.stages.3.label>
+  <PM_FilthAround_Mood.stages.3.description>This place is drowning in grime. I can barely stand it.</PM_FilthAround_Mood.stages.3.description>
+  <PM_FilthAround_Mood.stages.4.label>intolerable squalor</PM_FilthAround_Mood.stages.4.label>
+  <PM_FilthAround_Mood.stages.4.description>This place is a pigsty of filth. It's unbearable.</PM_FilthAround_Mood.stages.4.description>
+  <PM_OutdoorsDaytime_Mood.stages.0.label>exposed to daylight</PM_OutdoorsDaytime_Mood.stages.0.label>
+  <PM_OutdoorsDaytime_Mood.stages.0.description>I'm outside in broad daylight. Our place is in the shadows, toiling by Night.</PM_OutdoorsDaytime_Mood.stages.0.description>
+  <PM_LowFuelMood.stages.0.label>low vital fuel</PM_LowFuelMood.stages.0.label>
+  <PM_LowFuelMood.stages.0.description>My vital fuel is running out. I feel drained, unstable, as if my very being is slowly dissolving.</PM_LowFuelMood.stages.0.description>
+  <PM_CriticalFuelMood.stages.0.label>critical vital fuel</PM_CriticalFuelMood.stages.0.label>
+  <PM_CriticalFuelMood.stages.0.description>I'm dissolving. Every moment without vital fuel is a cold agony — my liquid body freezes and my mind crumbles.</PM_CriticalFuelMood.stages.0.description>
+  <PM_WitnessedLiquefaction.stages.0.label>saw a corpse liquefied</PM_WitnessedLiquefaction.stages.0.label>
+  <PM_WitnessedLiquefaction.stages.0.description>I watched the Sweepers dissolve a body in their machine. It's... hard to watch.</PM_WitnessedLiquefaction.stages.0.description>
+  <PM_LiquidReplenished.stages.0.label>vital fuel recharged</PM_LiquidReplenished.stages.0.label>
+  <PM_LiquidReplenished.stages.0.description>My tank is full. I'm operating at full capacity.</PM_LiquidReplenished.stages.0.description>
+  <PM_LiquidLow.stages.0.label>critical vital fuel</PM_LiquidLow.stages.0.label>
+  <PM_LiquidLow.stages.0.description>My tank is nearly dry. I must find organic matter quickly.</PM_LiquidLow.stages.0.description>
+  <PM_LiquidLow.stages.1.label>low vital fuel</PM_LiquidLow.stages.1.label>
+  <PM_LiquidLow.stages.1.description>My vital fuel level is dropping. I need to resupply soon.</PM_LiquidLow.stages.1.description>
+  <PM_NewSweeperBorn.stages.0.label>a new Sweeper among us</PM_NewSweeperBorn.stages.0.label>
+  <PM_NewSweeperBorn.stages.0.description>The Mother produced a new Sweeper. Our group is growing.</PM_NewSweeperBorn.stages.0.description>
+  <PM_DaylightDiscomfort.stages.0.label>overloaded sensors</PM_DaylightDiscomfort.stages.0.label>
+  <PM_DaylightDiscomfort.stages.0.description>The sunlight overloads my sensors. I'm operating at reduced capacity.</PM_DaylightDiscomfort.stages.0.description>
+
+</LanguageData>

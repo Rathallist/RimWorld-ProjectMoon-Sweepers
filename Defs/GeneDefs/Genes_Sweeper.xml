@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- =====================================================================
+       GÈNE : Corps Liquide (Liquid Body)
+       - Supprime le besoin de nourriture
+       - Ajoute le besoin de Carburant Vital
+       - Résistance accrue aux dégâts contondants
+       - Vulnérabilité aux dégâts perçants
+       - Pas de sang (remplacé par du carburant vital)
+  ===================================================================== -->
+
+  <GeneDef>
+    <defName>PM_LiquidBody</defName>
+    <label>corps liquide</label>
+    <labelShortAdj>liquide</labelShortAdj>
+    <description>Ce porteur n'est pas un être biologique au sens traditionnel — son corps est composé de Carburant Vital — un liquide rouge incandescent stocké dans un réservoir dorsal — contenu dans une armure noire structurelle. Il n'a pas besoin de manger, mais doit maintenir son niveau de Carburant Vital en absorbant de la matière organique. Son corps amorphe absorbe bien les chocs, mais est vulnérable aux lames et pointes.</description>
+    <iconPath>UI/Icons/Genes/Gene_LiquidBody</iconPath>
+    <displayCategory>PM_SweeperGenes</displayCategory>
+    <displayOrderInCategory>0</displayOrderInCategory>
+
+    <!-- Coût génétique élevé — c'est le gène fondamental du Sweeper -->
+    <biostatCpx>6</biostatCpx>
+    <biostatMet>-6</biostatMet>
+
+    <!-- Résistance aux dommages -->
+    <statFactors>
+      <!-- +60% résistance contondant -->
+      <ArmorRating_Blunt>1.60</ArmorRating_Blunt>
+      <!-- -40% résistance perçant -->
+      <ArmorRating_Sharp>0.60</ArmorRating_Sharp>
+    </statFactors>
+
+    <statOffsets>
+      <!-- Les Sweepers ne ressentent pas la douleur comme les humains.
+           Seuil d'évanouissement très élevé — ils combattent jusqu'au bout.
+           Valeur vanilla : ~0.75. 5.0 = pratiquement immunisé à l'évanouissement. -->
+      <PainShockThreshold>4.25</PainShockThreshold>
+    </statOffsets>
+
+    <!-- Remplace le sang par du carburant vital -->
+
+    <!-- Corps amorphe : ignore les blessures aux organes internes -->
+
+  </GeneDef>
+
+  <!-- =====================================================================
+       GÈNE : Nocturne / Sensibilité à la Lumière (Nightborn)
+       - Bonus importants la nuit
+       - Pénalités sous forte lumière (lumière naturelle > 50%)
+  ===================================================================== -->
+
+  <GeneDef>
+    <defName>PM_Nightborn</defName>
+    <label>né de la nuit</label>
+    <labelShortAdj>nocturne</labelShortAdj>
+    <description>Ce Sweeper est parfaitement adapté à l'obscurité. Ses sens sont calibrés pour les environnements sombres. En plein jour, ses capteurs sont perturbés — vitesse et efficacité réduites. La nuit, il est dans son élément.</description>
+    <iconPath>UI/Icons/Genes/Gene_Nightborn</iconPath>
+    <displayCategory>PM_SweeperGenes</displayCategory>
+    <displayOrderInCategory>1</displayOrderInCategory>
+
+    <biostatCpx>3</biostatCpx>
+
+    <!-- Effets en pleine lumière via le système natif 1.6 - PAS de patch C# -->
+    <conditionalStatAffecters>
+      <li Class="ConditionalStatAffecter_InSunlight">
+        <statFactors>
+          <!-- -30% vitesse de déplacement en plein soleil -->
+          <MoveSpeed>0.70</MoveSpeed>
+          <!-- -20% DPS mêlée en plein soleil -->
+          <MeleeDPS>0.80</MeleeDPS>
+          <!-- -20% travail global en plein soleil -->
+          <WorkSpeedGlobal>0.80</WorkSpeedGlobal>
+        </statFactors>
+      </li>
+    </conditionalStatAffecters>
+
+    <!-- Vision nocturne : bonus dans l'obscurité -->
+    <statFactors>
+      <!-- Vision parfaite même sans lumière -->
+    </statFactors>
+    <capMods>
+      <li>
+        <!-- Vision nocturne intégrée : Sight non affectée par l'obscurité -->
+        <capacity>Sight</capacity>
+        <offset>0.2</offset>
+      </li>
+    </capMods>
+
+  </GeneDef>
+
+  <!-- =====================================================================
+       GÈNE : Assimilation Organique (Organic Drain)
+       Permet au Sweeper de récupérer du Carburant Vital
+       en attaquant des entités organiques au corps à corps.
+  ===================================================================== -->
+
+  <GeneDef>
+    <defName>PM_OrganicDrain</defName>
+    <label>assimilation organique</label>
+    <labelShortAdj>drainant</labelShortAdj>
+    <description>À chaque coup porté sur une entité organique avec un Hook, ce Sweeper absorbe une partie de la matière vivante et la convertit en Carburant Vital. Plus la cible est grande, plus le gain est important.</description>
+    <iconPath>UI/Icons/Genes/Gene_OrganicDrain</iconPath>
+    <displayCategory>PM_SweeperGenes</displayCategory>
+    <displayOrderInCategory>2</displayOrderInCategory>
+
+    <biostatCpx>3</biostatCpx>
+
+    <!-- La logique de drain sera implémentée en C# via un patch sur les hits melee -->
+
+  </GeneDef>
+
+  <!-- =====================================================================
+       GÈNE : Corps-Combinaison (Suit Body)
+       La "combinaison" N'EST PAS un équipement — c'est le corps du Sweeper.
+       Ce gène contrôle l'apparence visuelle du pawn :
+         - Peau très sombre (tissu de la combinaison)
+         - Teinte rouge sur les veines / jointures (Carburant Vital qui transparaît)
+         - Corps plus grand / robuste que la moyenne humaine
+       Les armures (casque, plastron, jambières) sont des équipements
+       SÉPARÉS que le Sweeper met PAR-DESSUS ce corps.
+  ===================================================================== -->
+
+  <GeneDef>
+    <defName>PM_SuitBound</defName>
+    <label>corps-combinaison</label>
+    <labelShortAdj>combinaison</labelShortAdj>
+    <description>Ce Sweeper n'a pas de corps biologique — sa "peau" est en réalité une membrane de matière noire qui contient le Carburant Vital à l'intérieur. Des veines rouge incandescent apparaissent là où la pression interne est la plus forte : jointures, torse, visage. Ce corps ne peut jamais être "déshabillé" — il est ce que le Sweeper EST.</description>
+    <iconPath>UI/Icons/Genes/Gene_SuitBound</iconPath>
+    <displayCategory>PM_SweeperGenes</displayCategory>
+    <displayOrderInCategory>3</displayOrderInCategory>
+
+    <biostatCpx>2</biostatCpx>
+
+    <!-- endogeneCategory Melanin : ce gène ENTRE EN COMPÉTITION avec les
+         gènes de couleur de peau vanilla et les REMPLACE chez les Sweepers.
+         C'est la clé pour que l'apparence noire prime sur "Skin color" germline. -->
+    <endogeneCategory>Melanin</endogeneCategory>
+    <skinColorBase>(0.10, 0.10, 0.13)</skinColorBase>
+    <skinColorOverride>(0.06, 0.06, 0.10)</skinColorOverride>
+
+    <!-- Cheveux : forcés noirs et masqués -->
+    <forcedHair>Shaved</forcedHair>
+    <hairColorOverride>(0.05, 0.03, 0.03)</hairColorOverride>
+    <missingGeneRomanceChanceFactor>0</missingGeneRomanceChanceFactor>
+
+    <!-- Pas de vêtements "normaux" : le Sweeper ne peut porter
+         que des armures compatibles (requiredGenes: PM_LiquidBody) -->
+    <!-- Note : cette restriction est gérée côté apparel via requiredGenes -->
+
+  </GeneDef>
+
+  <!-- Catégorie d'affichage custom pour les gènes Sweeper -->
+  <GeneCategoryDef>
+    <defName>PM_SweeperGenes</defName>
+    <label>Sweeper</label>
+    <displayPriorityInXenotype>100</displayPriorityInXenotype>
+  </GeneCategoryDef>
+
+</Defs>

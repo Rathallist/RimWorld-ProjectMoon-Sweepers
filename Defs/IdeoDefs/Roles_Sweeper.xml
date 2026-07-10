@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- SPECIALIST : Coordinateur de balayage -->
+  <!-- Seul rôle custom : c'est un vrai AJOUT (specialist), pas un doublon.
+       Le Leader (= "patron du quartier") et le Moral Guide (= "gardien") sont
+       les rôles vanilla, renommés via les generalRules du meme
+       (memeLeaderNoun=patron, memeMoralist=gardien). -->
+  <PreceptDef MayRequire="Ludeon.RimWorld.Ideology" ParentName="PreceptRoleMultiBase">
+    <defName>PM_Role_SweepingCoordinator</defName>
+    <label>coordinateur de balayage</label>
+    <description>Un statut idéologique focalisé sur le nettoyage des Backstreets. Ce rôle accroît la vitesse de nettoyage et de démantèlement.</description>
+    <iconPath>UI/Roles/SpecialistMining</iconPath>
+    <nameMaker>PM_NamerRoleSweeper</nameMaker>
+    <roleRequiredWorkTagAny>
+      <li>Cleaning</li>
+    </roleRequiredWorkTagAny>
+    <roleTags><li>PM_SweepingSpecialist</li></roleTags>
+    <requiredMemes>
+      <li>PM_Meme_Sweeper</li>
+    </requiredMemes>
+    <roleEffects>
+      <li Class="RoleEffect_PawnStatOffset">
+        <statDef>WorkSpeedGlobal</statDef>
+        <modifier>0.2</modifier>
+      </li>
+    </roleEffects>
+    <displayOrderInImpact>2</displayOrderInImpact>
+  </PreceptDef>
+
+</Defs>

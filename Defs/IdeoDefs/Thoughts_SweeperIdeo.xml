@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Bonus : nettoyage de saleté (event PM_CleanedFilth) -->
+  <ThoughtDef MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>PM_CleanedFilth_Mood</defName>
+    <durationDays>0.5</durationDays>
+    <stackLimit>5</stackLimit>
+    <stackedEffectMultiplier>0.75</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>saleté purgée</label>
+        <description>J'ai purgé un peu de saleté du monde. Comme il se doit.</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Bonus : démantèlement (event PM_Deconstructed) -->
+  <ThoughtDef MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>PM_Deconstructed_Mood</defName>
+    <durationDays>0.5</durationDays>
+    <stackLimit>5</stackLimit>
+    <stackedEffectMultiplier>0.75</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>déchet balayé</label>
+        <description>J'ai démantelé ce qui devait l'être. Les Backstreets sont un peu plus propres.</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Malus situationnel : saleté autour (5 paliers, jusqu'à -15) -->
+  <ThoughtDef MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>PM_FilthAround_Mood</defName>
+    <workerClass>ProjectMoonSweepers.ThoughtWorker_FilthAround</workerClass>
+    <validWhileDespawned>false</validWhileDespawned>
+    <stages>
+      <li>
+        <label>un soupçon de saleté</label>
+        <description>Il y a un peu de saleté ici. Cela me dérange.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+      <li>
+        <label>de la saleté</label>
+        <description>Cet endroit n'est pas propre. C'est désagréable.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+      <li>
+        <label>saleté répugnante</label>
+        <description>Cet endroit est sale. C'est une offense à mes yeux.</description>
+        <baseMoodEffect>-9</baseMoodEffect>
+      </li>
+      <li>
+        <label>crasse envahissante</label>
+        <description>Ce lieu croule sous la crasse. Je le supporte à peine.</description>
+        <baseMoodEffect>-12</baseMoodEffect>
+      </li>
+      <li>
+        <label>immondices intolérables</label>
+        <description>Ce lieu est une porcherie d'immondices. C'est insoutenable.</description>
+        <baseMoodEffect>-15</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Malus situationnel : Sweeper dehors en plein jour -->
+  <ThoughtDef MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>PM_OutdoorsDaytime_Mood</defName>
+    <workerClass>ProjectMoonSweepers.ThoughtWorker_OutdoorsDaytime</workerClass>
+    <validWhileDespawned>false</validWhileDespawned>
+    <stages>
+      <li>
+        <label>exposé à la lumière du jour</label>
+        <description>Je suis dehors en plein jour. Notre place est dans l'ombre, à œuvrer la Nuit.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

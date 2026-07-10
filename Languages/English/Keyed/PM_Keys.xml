@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PM_Tap_NotConnected>Not connected to a network</PM_Tap_NotConnected>
+  <PM_Tap_ExtractLabel>Extract vital fuel</PM_Tap_ExtractLabel>
+  <PM_Tap_ExtractDesc>Extracts 25 units of vital fuel from the network as a haulable item.</PM_Tap_ExtractDesc>
+  <PM_Tap_NotEnough>Not enough vital fuel in the network (25 required).</PM_Tap_NotEnough>
+  <PM_Tap_FeedLabel>Feed a Sweeper</PM_Tap_FeedLabel>
+  <PM_Tap_FeedDesc>Designate a downed or bedridden Sweeper for a colonist to transfer vital fuel to from the network.</PM_Tap_FeedDesc>
+  <PM_Tap_NoColonist>No colonist available to transfer the fuel.</PM_Tap_NoColonist>
+  <PM_Tap_DrinkEmpty>Refuel with vital fuel (network empty)</PM_Tap_DrinkEmpty>
+  <PM_Tap_DrinkFull>Refuel with vital fuel (already full)</PM_Tap_DrinkFull>
+  <PM_Tap_DrinkUnreachable>Refuel with vital fuel (unreachable)</PM_Tap_DrinkUnreachable>
+  <PM_Tap_Drink>Refuel with vital fuel</PM_Tap_Drink>
+  <PM_Lang_Garbled> does not understand your language. (Research "Translation".)</PM_Lang_Garbled>
+  <PM_Lang_Someone>the other party</PM_Lang_Someone>
+
+  <PM_Need_StatusNormal>Normal</PM_Need_StatusNormal>
+  <PM_Need_StatusLow>Low — penalties active</PM_Need_StatusLow>
+  <PM_Need_StatusCritical>CRITICAL — paralyzed</PM_Need_StatusCritical>
+  <PM_Need_TipBody>Vital Fuel: {0} / {1} units ({2}%)
+Status: {3}
+
+Recharges by striking organic entities with a Hook, or via a vital fuel tap.</PM_Need_TipBody>
+  <PM_Need_Dissolved>{0} has dissolved — their Vital Fuel is depleted.</PM_Need_Dissolved>
+
+</LanguageData>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- =====================================================================
+       HEDIFF : Carence en Carburant Vital (Low)
+       Appliqué quand le liquide passe sous 0.3
+       Malus de mood, légère réduction des capacités
+  ===================================================================== -->
+
+  <HediffDef>
+    <defName>PM_RedLiquidLow</defName>
+    <label>carence en liquide</label>
+    <labelNoun>une carence en carburant vital</labelNoun>
+    <description>Le niveau de carburant vital interne est dangereusement bas. Le Sweeper est affaibli et instable.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.9, 0.2, 0.15)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_ThoughtSetter">
+        <thought>PM_LowFuelMood</thought>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <!-- Stade 1 : Low (0.1 - 0.3) -->
+        <label>faible</label>
+        <statOffsets>
+          <MoveSpeed>-0.5</MoveSpeed>
+          <WorkSpeedGlobal>-0.20</WorkSpeedGlobal>
+          <MeleeDodgeChance>-5</MeleeDodgeChance>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.10</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.20</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+        <becomeVisible>true</becomeVisible>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- =====================================================================
+       HEDIFF : Carburant Vital Critique (Critical)
+       Appliqué quand le liquide passe sous 0.1
+       Incapable de se déplacer
+  ===================================================================== -->
+
+  <HediffDef>
+    <defName>PM_RedLiquidCritical</defName>
+    <label>liquide critique</label>
+    <labelNoun>un état critique de carburant vital</labelNoun>
+    <description>Le carburant vital est presque épuisé. Le Sweeper est incapable de se déplacer de lui-même. Il s'effondre sur place.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.85, 0.15, 0.1)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_ThoughtSetter">
+        <thought>PM_CriticalFuelMood</thought>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>paralysé</label>
+        <statOffsets>
+          <MoveSpeed>-99</MoveSpeed>
+          <WorkSpeedGlobal>-0.8</WorkSpeedGlobal>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <setMax>0.08</setMax>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <setMax>0.15</setMax>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+        <becomeVisible>true</becomeVisible>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- =====================================================================
+       HEDIFF : Rechargement de Liquide (buff temporaire post-drain)
+       Appliqué brièvement après avoir drainé une entité organique via Hook.
+  ===================================================================== -->
+
+  <HediffDef>
+    <defName>PM_RedLiquidRecharge</defName>
+    <label>assimilation</label>
+    <labelNoun>une assimilation de matière organique</labelNoun>
+    <description>Le Sweeper vient d'absorber de la matière organique. Son liquide interne se reconstitue.</description>
+    <hediffClass>Hediff_MissingPart</hediffClass>
+    <defaultLabelColor>(1.0, 0.3, 0.2)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <label>en recharge</label>
+        <statOffsets>
+          <MoveSpeed>0.1</MoveSpeed>
+        </statOffsets>
+        <becomeVisible>true</becomeVisible>
+      </li>
+    </stages>
+  </HediffDef>
+
+
+  <!-- =====================================================================
+       HEDIFF : Sensibilité à la Lumière (Light Sensitivity)
+       Appliqué automatiquement par Patch_LightSensitivity.cs
+       quand un Sweeper Nightborn est exposé à plus de 50% de lumière.
+  ===================================================================== -->
+
+  <HediffDef>
+    <defName>PM_LightSensitivity</defName>
+    <label>surexposition lumineuse</label>
+    <labelNoun>une surexposition à la lumière</labelNoun>
+    <description>Ce Sweeper est exposé à une lumière trop intense. Ses capteurs internes sont perturbés, dégradant sa précision et sa vitesse de réaction.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.95, 0.6)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <isBad>true</isBad>
+    <stages>
+      <li>
+        <label>perturbé par la lumière</label>
+        <statOffsets>
+          <MoveSpeed>-0.25</MoveSpeed>
+          <ShootingAccuracyPawn>-5</ShootingAccuracyPawn>
+          <MeleeDodgeChance>-8</MeleeDodgeChance>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.20</offset>
+          </li>
+        </capMods>
+        <becomeVisible>true</becomeVisible>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

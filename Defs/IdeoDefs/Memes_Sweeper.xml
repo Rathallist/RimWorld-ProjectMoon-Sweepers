@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <MemeDef MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>PM_Meme_Sweeper</defName>
+    <label>sweeper</label>
+    <description>Les Sweepers se considèrent comme les nettoyeurs des Backstreets. La nuit venue, tout devient déchet à balayer. Ils vivent dans l'ombre, méprisent la saleté, et forment des "familles" métaphoriques liées par l'affection plutôt que le sang.</description>
+    <groupDef>Misc</groupDef>
+    <impact>3</impact>
+    <renderOrder>90</renderOrder>
+    <iconPath>UI/Memes/PM_Meme_Sweeper</iconPath>
+    <requireOne>
+      <li>
+        <li>PM_Precept_FilthAbhorrent</li>
+      </li>
+      <li>
+        <li>PM_Precept_StayInShadows</li>
+      </li>
+      <li>
+        <li>Corpses_DontCare</li>
+      </li>
+      <li>
+        <li>Darklight_Preferred</li>
+      </li>
+      <li>
+        <li>DarknessCombat_Preferred</li>
+      </li>
+      <li>
+        <li>Indoors_Acceptable</li>
+      </li>
+    </requireOne>
+    <generalRules>
+      <rulesStrings>
+        <li>memeAdjective->sweeper</li>
+        <li>memeAdjective->nocturne</li>
+        <li>memeConcept->le balayage</li>
+        <li>memeConcept->les Backstreets</li>
+        <li>memeLeaderNoun->patron</li>
+        <li>memeLeaderAdjective->nocturne</li>
+        <li>memeMoralist->gardien</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <rules>
+        <rulesStrings>
+          <!-- ideological founder -->
+          <li>setup(tag=meme_PM_Meme_Sweeper)           ->[founderName] grandit dans les Backstreets de la Cité, balayant les déchets que les Wings ordonnaient d'effacer. [founder_pronoun] comprit que nettoyer était un devoir sacré, et fonda notre famille.</li>
+          <li>story(uses=1,tag=meme_PM_Meme_Sweeper)    ->[founderName] rassembla les oubliés des Backstreets et leur apprit à récupérer tout ce qui traîne, vivant ou non, pour le ramener et le purifier.</li>
+          <!-- ideological lesson -->
+          <li>lessonIntro(tag=meme_PM_Meme_Sweeper)         ->Dans les ruelles sans fin de la Cité, sous l'ordre des Wings, j'ai appris une vérité simple :</li>
+          <li>lesson(tag=meme_PM_Meme_Sweeper)              ->la saleté est une offense, et le balayage est notre raison d'être</li>
+          <li>lessonReinforcement(tag=meme_PM_Meme_Sweeper) ->La Nuit venue, tout devient déchet à balayer.</li>
+          <!-- theist (au cas où structure theist) -->
+          <li>creation(tag=meme_PM_Meme_Sweeper)        ->[deity0_name] bâtit la Cité et ses districts sans fin, et confia aux Sweepers la tâche de la garder propre.</li>
+          <li>intro(tag=meme_PM_Meme_Sweeper)           ->[deity0_name] ordonna aux premiers Sweepers de nettoyer les Backstreets durant la Nuit.</li>
+          <!-- archist -->
+          <li>archistFact(tag=meme_PM_Meme_Sweeper)     ->La Singularité des Wings est une technologie quasi divine ; les Sweepers la servent en purifiant la Cité.</li>
+          <!-- animist -->
+          <li>animistFact(tag=meme_PM_Meme_Sweeper)     ->Chaque ruelle de la Cité a son esprit, apaisé quand elle est propre, courroucé quand la saleté s'accumule.</li>
+        </rulesStrings>
+      </rules>
+    </descriptionMaker>
+  </MemeDef>
+
+</Defs>

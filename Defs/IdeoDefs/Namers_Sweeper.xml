@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Namer du coordinateur de balayage. Modèle EXACT de NamerRoleShooter :
+       on inclut NamerRoleSpecialistUtility (qui fournit r_roleName et secondPart)
+       et on n'ajoute QUE des firstPart. NE PAS redéfinir r_roleName (sinon on
+       écrase la règle [firstPart][secondPart] héritée → Grammar unresolvable). -->
+  <RulePackDef MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>PM_NamerRoleSweeper</defName>
+    <include><li>NamerRoleSpecialistUtility</li></include>
+    <rulePack>
+      <rulesStrings>
+        <li>firstPart->sweep</li>
+        <li>firstPart->dust</li>
+        <li>firstPart->clean</li>
+        <li>firstPart->broom</li>
+        <li>firstPart->night</li>
+        <li>firstPart->street</li>
+        <li>firstPart->waste</li>
+        <li>firstPart->scrap</li>
+        <li>firstPart->grime</li>
+        <li>firstPart->purge</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

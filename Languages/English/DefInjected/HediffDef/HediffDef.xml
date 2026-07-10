@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PM_CrystallizerImplant.label>emergency crystallizer</PM_CrystallizerImplant.label>
+  <PM_CrystallizerImplant.description>An implant of crystallized vital fuel grafted onto a body part. When severe bleeding is detected, it releases its charge to instantly cauterize the wound, then shatters.</PM_CrystallizerImplant.description>
+  <PM_CrystallizerImplant_Spent.label>spent crystallizer</PM_CrystallizerImplant_Spent.label>
+  <PM_CrystallizerImplant_Spent.description>An emergency crystallizer that has already triggered. Its charge is depleted — it must be surgically replaced to restore protection.</PM_CrystallizerImplant_Spent.description>
+  <PM_RedLiquidLow.label>fuel deficiency</PM_RedLiquidLow.label>
+  <PM_RedLiquidLow.description>The internal vital fuel level is dangerously low. The Sweeper is weakened and unstable.</PM_RedLiquidLow.description>
+  <PM_RedLiquidCritical.label>critical fuel</PM_RedLiquidCritical.label>
+  <PM_RedLiquidCritical.description>Vital fuel is almost depleted. The Sweeper is unable to move on its own. It collapses on the spot.</PM_RedLiquidCritical.description>
+  <PM_RedLiquidRecharge.label>assimilation</PM_RedLiquidRecharge.label>
+  <PM_RedLiquidRecharge.description>The Sweeper has just absorbed organic matter. Its internal fluid is replenishing.</PM_RedLiquidRecharge.description>
+  <PM_LightSensitivity.label>light overexposure</PM_LightSensitivity.label>
+  <PM_LightSensitivity.description>This Sweeper is exposed to overly intense light. Its internal sensors are disrupted, degrading its accuracy and reaction speed.</PM_LightSensitivity.description>
+
+  <PM_CrystallizerImplant.stages.0.label>active</PM_CrystallizerImplant.stages.0.label>
+  <PM_CrystallizerImplant_Spent.stages.0.label>shattered</PM_CrystallizerImplant_Spent.stages.0.label>
+  <PM_RedLiquidLow.stages.0.label>low</PM_RedLiquidLow.stages.0.label>
+  <PM_RedLiquidCritical.stages.0.label>paralyzed</PM_RedLiquidCritical.stages.0.label>
+  <PM_RedLiquidRecharge.stages.0.label>recharging</PM_RedLiquidRecharge.stages.0.label>
+  <PM_LightSensitivity.stages.0.label>light-disrupted</PM_LightSensitivity.stages.0.label>
+
+</LanguageData>

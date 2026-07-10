@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <HistoryEventDef MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>PM_CleanedFilth</defName>
+    <label>nettoyage de saleté</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>PM_Deconstructed</defName>
+    <label>démantèlement</label>
+  </HistoryEventDef>
+
+</Defs>

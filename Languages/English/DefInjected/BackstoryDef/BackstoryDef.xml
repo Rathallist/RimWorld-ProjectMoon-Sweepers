@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PM_Backstory_SweeperChild.description>[PAWN_nameDef] emerged from the Mother, fully formed, shaped by Vital Fuel. Where others had a childhood, [PAWN_pronoun] knew only the red pulse of the incubator and the call to sweep.</PM_Backstory_SweeperChild.description>
+  <PM_Backstory_SweeperChild.titleShort>spawn</PM_Backstory_SweeperChild.titleShort>
+  <PM_Backstory_SweeperChild.title>spawn of the Mother</PM_Backstory_SweeperChild.title>
+  <PM_Backstory_SweeperAdult.description>[PAWN_nameDef] was forged for a single purpose: to clean. [PAWN_possessive] limbs instinctively know the weight of a Hook and the labor of deconstruction, inherited from the Vital Fuel [PAWN_pronoun] is made of.</PM_Backstory_SweeperAdult.description>
+  <PM_Backstory_SweeperAdult.titleShort>sweeper</PM_Backstory_SweeperAdult.titleShort>
+  <PM_Backstory_SweeperAdult.title>sweeper of the Backstreets</PM_Backstory_SweeperAdult.title>
+
+</LanguageData>

@@ -1,0 +1,28 @@
+# ===== RimWorld mod .gitignore =====
+
+# Build artifacts C# (on versionne le code source ET la DLL compilée,
+# mais pas les fichiers intermédiaires de build)
+Source/**/obj/
+Source/**/bin/
+*.user
+*.suo
+*.userprefs
+
+# Visual Studio / Rider
+.vs/
+.idea/
+*.csproj.user
+
+# Fichiers temporaires
+*.tmp
+*.bak
+*~
+Thumbs.db
+.DS_Store
+
+# Sauvegardes de travail (les _backup qu'on créait)
+*_ideo_backup*
+*_roles_original*
+
+# Logs
+*.log

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PM_RedLiquid.label>vital fuel</PM_RedLiquid.label>
+  <PM_RedLiquid.description>The internal fluid that keeps this Sweeper alive and functioning. Without it, the Sweeper is paralyzed. It can be recharged via a Hook on organic entities, or via a vital fuel tap.</PM_RedLiquid.description>
+
+</LanguageData>

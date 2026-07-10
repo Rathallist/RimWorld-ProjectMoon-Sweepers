@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Ajouter PM_Meme_Sweeper aux requiredMemes de Corpses_DontCare -->
+  <!-- pour que notre meme puisse forcer/débloquer ce precept vanilla -->
+  <Operation Class="PatchOperationConditional" MayRequire="Ludeon.RimWorld.Ideology">
+    <xpath>Defs/PreceptDef[defName="Corpses_DontCare"]/requiredMemes</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/PreceptDef[defName="Corpses_DontCare"]/requiredMemes</xpath>
+      <value>
+        <li>PM_Meme_Sweeper</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/PreceptDef[defName="Corpses_DontCare"]</xpath>
+      <value>
+        <requiredMemes>
+          <li>PM_Meme_Sweeper</li>
+        </requiredMemes>
+      </value>
+    </nomatch>
+  </Operation>
+
+</Patch>

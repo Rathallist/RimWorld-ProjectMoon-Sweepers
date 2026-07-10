@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- =====================================================================
+       XÉNOTYPE : Sweeper
+       Race de "humains liquides" issus de l'univers Project Moon.
+       Entités composées de Carburant Vital contenu dans une combinaison noire.
+  ===================================================================== -->
+
+  <XenotypeDef>
+    <defName>PM_Sweeper</defName>
+    <label>Sweeper</label>
+    <description>Un Sweeper est une entité dont le corps est constitué de Carburant Vital — une matière vivante et consciente — contenu dans une combinaison noire structurelle. Ils ne mangent pas, ne dorment pas, et ne saignent pas au sens traditionnel. À la place, ils doivent maintenir leur niveau de Carburant Vital en absorbant de la matière organique. Parfaitement adaptés à l'obscurité, ils sont vulnérables à la lumière intense et aux armes perçantes, mais résistent exceptionnellement bien aux chocs et coups contondants.</description>
+
+    <iconPath>UI/Icons/Xenotypes/Xenotype_Sweeper</iconPath>
+
+    <!-- Valeur de combat élevée : les Sweepers sont des combattants nés -->
+    <combatPowerFactor>1.4</combatPowerFactor>
+
+    <!-- Coût dans la germline editor -->
+    <inheritable>false</inheritable>
+
+    <!-- Gènes constitutifs du Sweeper -->
+    <genes>
+      <!-- === GÈNES CORE SWEEPER === -->
+      <li>PM_LiquidBody</li>       <!-- Corps liquide : remplace nourriture, résistances -->
+      <li>PM_Nightborn</li>        <!-- Nocturne : bonus nuit, pénalité lumière -->
+      <li>PM_OrganicDrain</li>     <!-- Drain organique : recharge via Hook -->
+
+      <!-- === GÈNES VANILLA COMPATIBLES === -->
+      <li>Sterile</li>             <!-- Pas de reproduction biologique -->
+      <li>ImmunityStrong</li>      <!-- Résistance aux maladies -->
+      <li>AgingSlowed</li>         <!-- Pas de vieillissement -->
+
+      <!-- PM_SuitBound EN DERNIER : sa skinColorOverride noire prime sur tout -->
+      <li>PM_SuitBound</li>
+
+    </genes>
+
+    <!-- Apparence : peau noire comme la combinaison -->
+
+    <!-- Tous les Sweepers ont les yeux blancs/luisant -->
+
+  </XenotypeDef>
+
+</Defs>

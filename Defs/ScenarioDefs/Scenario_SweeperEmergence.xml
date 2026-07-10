@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ScenarioDef>
+    <defName>PM_Scenario_SweeperEmergence</defName>
+    <label>Émergence</label>
+    <description>Deux Sweepers — entités de Carburant Vital contenu dans des armures noires — se retrouvent isolés après un crash. La Mother qu\'ils transportent est leur seule chance de créer de nouveaux Sweepers.\n\nSans électricité, sans nourriture, sans confort. Juste du Carburant Vital — et il faut en trouver.</description>
+
+    <scenario>
+      <name>Émergence</name>
+      <summary>Deux Sweepers, une Mother, deux Hooks, de l'acier, des composants et un peu de nourriture.</summary>
+      <description>Deux Sweepers se réveillent après un crash. Sans Carburant Vital, ils sont condamnés. La Mother qu\'ils transportent peut en créer d\'autres — mais il faut d\'abord survivre.</description>
+
+      <playerFaction>
+        <def>PlayerFaction</def>
+        <factionDef>PlayerColony</factionDef>
+      </playerFaction>
+
+      <surfaceLayer>
+        <def>SurfaceLayerFixed</def>
+        <layer>Surface</layer>
+        <settingsDef>Surface</settingsDef>
+        <hide>True</hide>
+        <tag>Surface</tag>
+        <connections>
+          <li>
+            <tag>Orbit</tag>
+            <zoomMode>ZoomOut</zoomMode>
+          </li>
+        </connections>
+      </surfaceLayer>
+
+      <parts>
+
+        <li Class="ScenPart_PlanetLayer">
+          <def>PlanetLayer</def>
+          <layer>Orbit</layer>
+          <settingsDef>Orbit</settingsDef>
+          <hide>True</hide>
+          <tag>Orbit</tag>
+          <connections>
+            <li>
+              <tag>Surface</tag>
+              <zoomMode>ZoomIn</zoomMode>
+            </li>
+          </connections>
+        </li>
+
+        <!-- Structure EXACTE du scénario Sanguophage vanilla -->
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns_Xenotypes">
+          <def>ConfigurePawnsXenotypes</def>
+          <pawnChoiceCount>8</pawnChoiceCount>
+          <xenotypeCounts>
+            <li>
+              <requiredAtStart>True</requiredAtStart>
+              <xenotype>PM_Sweeper</xenotype>
+              <count>2</count>
+              <allowedDevelopmentalStages>Child, Adult</allowedDevelopmentalStages>
+              <description>Sweeper</description>
+            </li>
+          </xenotypeCounts>
+        </li>
+
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <method>DropPods</method>
+        </li>
+
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>PM_Hook_Standard</thingDef>
+          <count>2</count>
+        </li>
+
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>PM_Mother</thingDef>
+          <count>1</count>
+        </li>
+
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Steel</thingDef>
+          <count>500</count>
+        </li>
+
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>ComponentIndustrial</thingDef>
+          <count>20</count>
+        </li>
+
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Meat_Cow</thingDef>
+          <count>100</count>
+        </li>
+
+        <!-- Recherches de base débloquées : réseau de carburant, incubation,
+             armes et armure (avec Smithing pour forger les armures). -->
+        <li Class="ScenPart_StartingResearch">
+          <def>StartingResearch</def>
+          <project>PM_Research_VitalFuel</project>
+        </li>
+        <li Class="ScenPart_StartingResearch">
+          <def>StartingResearch</def>
+          <project>PM_Research_SweeperTech</project>
+        </li>
+        <li Class="ScenPart_StartingResearch">
+          <def>StartingResearch</def>
+          <project>PM_Research_SweeperWeapons</project>
+        </li>
+        <li Class="ScenPart_StartingResearch">
+          <def>StartingResearch</def>
+          <project>Smithing</project>
+        </li>
+        <li Class="ScenPart_StartingResearch">
+          <def>StartingResearch</def>
+          <project>PM_Research_SweeperArmor</project>
+        </li>
+
+      </parts>
+    </scenario>
+
+  </ScenarioDef>
+
+</Defs>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ============ ONGLET DE RECHERCHE ============ -->
+  <ResearchTabDef>
+    <defName>PM_SweeperTab</defName>
+    <label>Sweepers</label>
+  </ResearchTabDef>
+
+  <!-- ============ RECHERCHE 1 : ANALYSE DU CARBURANT VITAL ============
+       Nécessite d'étudier un "Fragment de Sweeper" (objet trouvable).
+       Débloque la production de carburant vital et les bâtiments de base. -->
+  <ResearchProjectDef>
+    <defName>PM_Research_VitalFuel</defName>
+    <label>analyse du carburant vital</label>
+    <description>En étudiant un fragment de Sweeper récupéré, vous percez le secret du carburant vital — le liquide rouge qui anime ces entités. Débloque le Liquidifier, les tuyaux, réservoirs et robinets.</description>
+    <tab>PM_SweeperTab</tab>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <techprintCount>1</techprintCount>
+    <techprintCommonality>1.0</techprintCommonality>
+    <heldByFactionCategoryTags>
+      <li>Outlander</li>
+    </heldByFactionCategoryTags>
+    <researchViewX>0</researchViewX>
+    <researchViewY>0</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- ============ RECHERCHE 2 : INCUBATION SWEEPER ============
+       Débloque la Mother (production de Sweepers). -->
+  <ResearchProjectDef>
+    <defName>PM_Research_SweeperTech</defName>
+    <label>incubation Sweeper</label>
+    <description>Maîtrisez le processus d'incubation qui permet à une Mother de créer de nouveaux Sweepers à partir de carburant vital. Débloque la Mother.</description>
+    <tab>PM_SweeperTab</tab>
+    <baseCost>2000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>PM_Research_VitalFuel</li>
+    </prerequisites>
+    <researchViewX>1</researchViewX>
+    <researchViewY>0</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- ============ RECHERCHE 3 : ARMEMENT SWEEPER ============
+       Débloque le Cristalliseur et les Hooks. -->
+  <ResearchProjectDef>
+    <defName>PM_Research_SweeperWeapons</defName>
+    <label>armement Sweeper</label>
+    <description>Cristallisez le carburant vital en armes. Débloque le Cristalliseur et les Hooks.</description>
+    <tab>PM_SweeperTab</tab>
+    <baseCost>1500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>PM_Research_VitalFuel</li>
+    </prerequisites>
+    <researchViewX>1</researchViewX>
+    <researchViewY>1</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- ============ RECHERCHE 4 : ARMURE SWEEPER ============
+       Débloque les armures. -->
+  <ResearchProjectDef>
+    <defName>PM_Research_SweeperArmor</defName>
+    <label>armure Sweeper</label>
+    <description>Forgez les armures noires caractéristiques des Sweepers. Débloque les pièces d'armure au Smithy.</description>
+    <tab>PM_SweeperTab</tab>
+    <baseCost>1500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>PM_Research_VitalFuel</li>
+      <li>Smithing</li>
+    </prerequisites>
+    <researchViewX>1</researchViewX>
+    <researchViewY>2</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- ============ RECHERCHE 5 : AUGMENTATIONS SWEEPER ============
+       Débloque réservoir dorsal et cristalliseur d'urgence. -->
+  <ResearchProjectDef>
+    <defName>PM_Research_SweeperAugments</defName>
+    <label>augmentations Sweeper</label>
+    <description>Développez des implants pour vos Sweepers : réservoirs dorsaux pour stocker plus de carburant vital, et cristalliseurs d'urgence anti-hémorragie.</description>
+    <tab>PM_SweeperTab</tab>
+    <baseCost>2500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>PM_Research_SweeperTech</li>
+    </prerequisites>
+    <researchViewX>2</researchViewX>
+    <researchViewY>0</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- TRADUCTION : sans prérequis. Permet la communication (commerce, 
+       recrutement) entre Sweepers et non-Sweepers. Sans elle, les deux 
+       populations ne se comprennent pas. -->
+  <ResearchProjectDef>
+    <defName>PM_Research_Translation</defName>
+    <label>traduction</label>
+    <description>Les Sweepers parlent une langue qui leur est propre, incompréhensible pour les autres — et réciproquement. En compilant un lexique à partir d'observations patientes, vous établissez enfin un pont linguistique. Débloque le commerce et facilite le recrutement entre Sweepers et non-Sweepers.</description>
+    <tab>PM_SweeperTab</tab>
+    <baseCost>800</baseCost>
+    <techLevel>Industrial</techLevel>
+    <researchViewX>0</researchViewX>
+    <researchViewY>3</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- MODULES DE LA MOTHER : recherche avancée pour débloquer les 3 modules
+       d'amélioration. Nécessite l'incubation Sweeper (la Mother). -->
+  <ResearchProjectDef>
+    <defName>PM_Research_MotherModules</defName>
+    <label>modules d'incubation avancés</label>
+    <description>En disséquant les mécanismes internes de la Mother, vous apprenez à greffer des modules qui altèrent ses cycles : accélération de la gestation, production multiple, et raffinage du carburant pour des Sweepers plus performants. Débloque les trois modules d'amélioration de la Mother.</description>
+    <tab>PM_SweeperTab</tab>
+    <baseCost>4000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>PM_Research_SweeperTech</li>
+    </prerequisites>
+    <researchViewX>3</researchViewX>
+    <researchViewY>2</researchViewY>
+  </ResearchProjectDef>
+
+</Defs>

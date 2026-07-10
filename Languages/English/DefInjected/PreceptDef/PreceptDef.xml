@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PM_Role_SweepingCoordinator.label>sweeping coordinator</PM_Role_SweepingCoordinator.label>
+  <PM_Role_SweepingCoordinator.description>An ideological status focused on cleaning the Backstreets. This role increases cleaning and deconstruction speed.</PM_Role_SweepingCoordinator.description>
+  <PM_Precept_FilthAbhorrent.label>filth abhorrent</PM_Precept_FilthAbhorrent.label>
+  <PM_Precept_FilthAbhorrent.description>Filth is an offense. A worthy Sweeper cleans relentlessly, and suffers in the presence of grime.</PM_Precept_FilthAbhorrent.description>
+  <PM_Precept_StayInShadows.label>toil in shadow</PM_Precept_StayInShadows.label>
+  <PM_Precept_StayInShadows.description>The Sweepers' place is in shadow. The City sends them to clean the Backstreets during the Night; exposing oneself to daylight is a transgression.</PM_Precept_StayInShadows.description>
+
+</LanguageData>

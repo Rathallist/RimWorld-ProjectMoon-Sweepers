@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Cacher les rôles vanilla Leader et Moralist de la sélection.
+       Nos rôles custom (Patron du quartier = leaderRole, Gardien) les remplacent.
+       On retire leur visibilité dans l'UI de sélection sans les supprimer
+       (pour ne pas casser les autres idéologies qui en ont besoin).
+       
+       NOTE : ces rôles restent pour les AUTRES idéologies. On ne peut pas les
+       cacher seulement pour la nôtre via XML pur. Cette approche les retire 
+       globalement de la liste "Add role" — à n'utiliser que si tu joues 
+       uniquement avec l'idéo Sweeper. -->
+
+  <!-- Désactivé par défaut : décommenter si tu veux retirer les rôles vanilla
+       de TOUTES les idéologies.
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/PreceptDef[defName="IdeoRole_Leader"]</xpath>
+    <value>
+      <visible>false</visible>
+    </value>
+  </Operation>
+  -->
+
+</Patch>

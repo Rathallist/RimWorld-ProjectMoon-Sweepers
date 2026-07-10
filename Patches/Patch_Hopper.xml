@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Élargit le hopper vanilla pour accepter corps et organes en plus de la viande,
+       afin d'alimenter le Liquidifier avec toute matière organique. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="Hopper"]/building/fixedStorageSettings/filter/categories</xpath>
+    <value>
+      <li>BodyParts</li>
+      <li>Corpses</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="Hopper"]/building/defaultStorageSettings/filter/categories</xpath>
+    <value>
+      <li>BodyParts</li>
+      <li>Corpses</li>
+    </value>
+  </Operation>
+
+</Patch>

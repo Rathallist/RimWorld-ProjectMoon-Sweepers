@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Project Moon - Sweepers</name>
+  <author>Althar</author>
+  <packageId>Althar.ProjectMoonSweepers</packageId>
+  <url>https://github.com/Althar/ProjectMoonSweepers</url>
+
+  <description>Adds the Sweepers from the Project Moon universe — humanoid entities whose bodies are made of Vital Fuel, a living red liquid contained within structural black suits.
+
+═══════════════════════════════
+  CONTENT
+═══════════════════════════════
+
+• XENOTYPE — The Sweeper xenotype: beings of Vital Fuel that do not eat or sleep, but must maintain their fuel level by absorbing organic matter. Adapted to darkness, vulnerable to light and piercing weapons, resistant to blunt impacts.
+
+• VITAL FUEL NETWORK — A dedicated pipe network (pipes, reservoirs, taps) that carries Vital Fuel between buildings. Liquidify organic matter to produce fuel, and let your Sweepers recharge at taps.
+
+• THE MOTHER — An incubator that produces new Sweepers from Vital Fuel, upgradable with three stackable modules: gestation (speed), multiplication (count), and enhancement (starting skills).
+
+• WEAPONS AND ARMOR — Crystallize Vital Fuel into Hooks (melee weapons that drain organic matter), and forge the characteristic black Sweeper armor. Back tanks increase fuel capacity.
+
+• SWEEPER FACTION — A dedicated Sweeper union faction with its own caravans, traders, and Vital Fuel goods. Without researching Translation, you cannot trade or communicate with them — and vice versa.
+
+• IDEOLOGY (optional) — With the Ideology DLC, a full "Will of the City" ideology: the Sweeper meme, the City structure, a dedicated culture, precepts (abhor filth, toil in shadow), and the Sweeping Coordinator role.
+
+• SCENARIO — "Sweeper Emergence": start as two exiled Sweepers with a Mother, and rebuild your family on the rim.
+
+═══════════════════════════════
+  REQUIREMENTS
+═══════════════════════════════
+
+• Harmony (required)
+• Biotech DLC (required — for the xenotype and genes)
+• Ideology DLC (optional — unlocks the Sweeper ideology content)
+
+Fully playable in English and French.
+
+═══════════════════════════════
+  LOAD ORDER
+═══════════════════════════════
+
+Load after Harmony and Biotech. Place near the end of your load order for best compatibility.
+
+═══════════════════════════════
+
+Project Moon and its universe belong to their respective owners. This is a non-commercial fan mod.</description>
+
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+    </li>
+    <li>
+      <packageId>Ludeon.RimWorld.Biotech</packageId>
+      <displayName>Biotech</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/1826140122</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>Ludeon.RimWorld.Biotech</li>
+    <li>Ludeon.RimWorld.Ideology</li>
+  </loadAfter>
+</ModMetaData>

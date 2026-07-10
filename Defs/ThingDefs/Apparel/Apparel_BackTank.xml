@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Base commune des réservoirs dorsaux -->
+  <ThingDef Name="PM_BackTankBase" ParentName="ApparelBase" Abstract="True">
+    <thingClass>Apparel</thingClass>
+    <category>Item</category>
+    <tradeability>All</tradeability>      <!-- Achetable auprès des caravanes Sweeper (seules à les lister) -->
+    <techLevel>Industrial</techLevel>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/PM_BackTank/PM_BackTank</wornGraphicPath>
+      <layers>
+        <li>Belt</li>
+      </layers>
+      <tags>
+        <li>PM_SweeperGear</li>
+      </tags>
+    </apparel>
+    <comps>
+      <li Class="ProjectMoonSweepers.CompProperties_FuelCapacityBonus"/>
+    </comps>
+  </ThingDef>
+
+  <!-- Petit réservoir dorsal : +30% capacité -->
+  <ThingDef ParentName="PM_BackTankBase">
+    <defName>PM_BackTank_Small</defName>
+    <label>petit réservoir dorsal</label>
+    <description>Un petit réservoir fixé dans le dos qui augmente la quantité de carburant vital qu'un Sweeper peut contenir. Léger mais capacité modeste.</description>
+    <graphicData>
+      <texPath>Things/Item/PM_BackTank_Small</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>180</MarketValue>
+      <Mass>3</Mass>
+      <MaxHitPoints>80</MaxHitPoints>
+    </statBases>
+    <costList>
+      <Steel>40</Steel>
+      <PM_RedLiquidResource>20</PM_RedLiquidResource>
+    </costList>
+    <modExtensions>
+      <li Class="ProjectMoonSweepers.FuelCapacityExtension">
+        <bonusFraction>0.30</bonusFraction>
+      </li>
+    </modExtensions>
+    <recipeMaker>
+      <researchPrerequisite>PM_Research_SweeperAugments</researchPrerequisite>
+      <workSkill>Crafting</workSkill>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+
+  <!-- Réservoir dorsal moyen : +60% capacité -->
+  <ThingDef ParentName="PM_BackTankBase">
+    <defName>PM_BackTank_Medium</defName>
+    <label>réservoir dorsal</label>
+    <description>Un réservoir dorsal de taille standard. Bon compromis entre capacité de carburant vital et poids.</description>
+    <graphicData>
+      <texPath>Things/Item/PM_BackTank_Medium</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>340</MarketValue>
+      <Mass>7</Mass>
+      <MaxHitPoints>120</MaxHitPoints>
+    </statBases>
+    <costList>
+      <Steel>80</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <PM_RedLiquidResource>40</PM_RedLiquidResource>
+    </costList>
+    <modExtensions>
+      <li Class="ProjectMoonSweepers.FuelCapacityExtension">
+        <bonusFraction>0.60</bonusFraction>
+      </li>
+    </modExtensions>
+    <recipeMaker>
+      <researchPrerequisite>PM_Research_SweeperAugments</researchPrerequisite>
+      <workSkill>Crafting</workSkill>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+
+  <!-- Grand réservoir dorsal : +100% capacité -->
+  <ThingDef ParentName="PM_BackTankBase">
+    <defName>PM_BackTank_Large</defName>
+    <label>grand réservoir dorsal</label>
+    <description>Un réservoir dorsal massif qui double la capacité de carburant vital. Lourd et encombrant, mais permet de tenir bien plus longtemps entre deux recharges.</description>
+    <graphicData>
+      <texPath>Things/Item/PM_BackTank_Large</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>600</MarketValue>
+      <Mass>14</Mass>
+      <MaxHitPoints>160</MaxHitPoints>
+    </statBases>
+    <costList>
+      <Steel>140</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <PM_RedLiquidResource>80</PM_RedLiquidResource>
+    </costList>
+    <modExtensions>
+      <li Class="ProjectMoonSweepers.FuelCapacityExtension">
+        <bonusFraction>1.00</bonusFraction>
+      </li>
+    </modExtensions>
+    <recipeMaker>
+      <researchPrerequisite>PM_Research_SweeperAugments</researchPrerequisite>
+      <workSkill>Crafting</workSkill>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+
+</Defs>

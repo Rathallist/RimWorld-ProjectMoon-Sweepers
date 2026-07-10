@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ===================================================================
+       BASE ABSTRAITE : Recette Sweeper
+  =================================================================== -->
+
+  <RecipeDef Name="PM_SweeperRecipeBase" Abstract="True">
+    <workSkill>Crafting</workSkill>
+    <allowMixingIngredients>false</allowMixingIngredients>
+  </RecipeDef>
+
+  <!-- ===================================================================
+       RECETTE : Liquéfier de la Viande (Liquidifier)
+       Input  : 20 unités de viande (n'importe quel type)
+       Output : 5 unités de Carburant Vital
+       Durée  : ~30 min de travail
+  =================================================================== -->
+
+  <!-- ===================================================================
+       RECETTE : Liquéfier des Organes (Liquidifier)
+       Input  : 1 organe (cœur, poumon, rein, foie...)
+       Output : 12 unités de Carburant Vital
+       Durée  : ~20 min
+       Meilleur rendement que la viande simple.
+  =================================================================== -->
+
+  <!-- ===================================================================
+       RECETTE : Liquéfier un Cadavre (Liquidifier)
+       Input  : 1 cadavre (humain ou animal, frais de préférence)
+       Output : 25 unités de Carburant Vital (humain) / variable (animal)
+       Durée  : ~1h
+       Rendement maximal, mais moralement lourd.
+  =================================================================== -->
+
+  <!-- ===================================================================
+       THING DEF : Sweeper Core (output intermédiaire de la Mother)
+       Un "nœud de conscience" en attente d'activation.
+       Le C# futur le transformera directement en pawn Sweeper.
+  =================================================================== -->
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>PM_SweeperCore</defName>
+    <label>nœud Sweeper</label>
+    <description>Une sphère dense de Carburant Vital cristallisé, contenant la "graine" d'un nouveau Sweeper. Elle doit être placée dans une Mother active pour terminer l'incubation, ou activée manuellement par un Sweeper existant.</description>
+
+    <graphicData>
+      <texPath>Things/Item/Resource/PM_SweeperCore</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(180, 20, 10)</color>
+      <drawSize>(0.8, 0.8)</drawSize>
+    </graphicData>
+
+    <statBases>
+      <MaxHitPoints>30</MaxHitPoints>
+      <MarketValue>200</MarketValue>
+      <Mass>2</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+
+    <stackLimit>1</stackLimit>
+    <thingCategories>
+      <li>PM_SweeperResources</li>
+    </thingCategories>
+
+    <!-- Lueur rouge faible -->
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>1.5</glowRadius>
+        <glowColor>(200, 20, 10, 0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

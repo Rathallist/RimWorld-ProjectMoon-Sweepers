@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PM_Scenario_SweeperEmergence.label>Sweeper Emergence</PM_Scenario_SweeperEmergence.label>
+  <PM_Scenario_SweeperEmergence.description>You are Sweepers, exiled from the City. Far from the Backstreets you were meant to clean, you must survive on this rimworld and rebuild a family. Maintain your vital fuel, sweep the filth and grow the family.</PM_Scenario_SweeperEmergence.description>
+  <PM_Scenario_SweeperEmergence.scenario.name>Emergence</PM_Scenario_SweeperEmergence.scenario.name>
+  <PM_Scenario_SweeperEmergence.scenario.summary>Two Sweepers, one Mother, two Hooks, some steel, components and a little food.</PM_Scenario_SweeperEmergence.scenario.summary>
+  <PM_Scenario_SweeperEmergence.scenario.description>Two Sweepers awaken after a crash. Without Vital Fuel, they are doomed. The Mother they carry can create more of them — but first they must survive.</PM_Scenario_SweeperEmergence.scenario.description>
+
+</LanguageData>

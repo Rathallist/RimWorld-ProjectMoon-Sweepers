@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ===================================================================
+       BASE ABSTRAITE : Armes Sweeper
+  =================================================================== -->
+
+  <ThingDef Name="PM_SweeperWeaponBase" Abstract="True" ParentName="BaseMeleeWeapon">
+    <weaponTags>
+      <li>PM_SweeperWeapon</li>
+    </weaponTags>
+    <tradeability>All</tradeability>      <!-- Vendable uniquement par les caravanes Sweeper (seules à les lister en stock) -->
+    <destroyOnDrop>false</destroyOnDrop>
+    <statBases>
+      <Flammability>0.0</Flammability>
+      <DeteriorationRate>0.0</DeteriorationRate>  <!-- Ne se dégrade pas -->
+    </statBases>
+    <!-- Écrase le recipeMaker hérité de BaseMeleeWeapon (qui mettait l'arme
+         dans les smithies). On le désactive ; les recettes sont gérées par
+         les RecipeDef explicites pointant vers PM_Crystallizer. -->
+    <recipeMaker>
+      <recipeUsers Inherit="False" />
+    </recipeMaker>
+  </ThingDef>
+
+
+  <!-- ===================================================================
+       ARME : Hook Standard
+       Le crochet de base de tout Sweeper.
+       Fabriqué à partir de Carburant Vital cristallisé — donc rouge incandescent.
+
+       Concept : arme légère, coups rapides, drain organique sur hit.
+       Un Sweeper en porte deux simultanément (dual wield via Biotech).
+
+       Dégâts : Taillade (tranchant) — vulnérabilité des Sweepers aux perçants
+                implique que leurs armes IGNORENT leur propre faiblesse.
+       Arme naturelle : elle fait partie du Sweeper, portée en permanence.
+  =================================================================== -->
+
+  <ThingDef ParentName="PM_SweeperWeaponBase">
+    <defName>PM_Hook_Standard</defName>
+    <label>Hook</label>
+    <description>Un crochet en forme de faucille forgé à partir de Carburant Vital cristallisé. La lame vibre légèrement d'une chaleur interne. Ce n'est pas vraiment une arme fabriquée — le Sweeper la fait émerger de son propre corps. Chaque coup arrache de la matière organique à la cible et la convertit en Carburant Vital pour le porteur.</description>
+
+    <graphicData>
+      <texPath>Things/Item/Equipment/PM_Hook/PM_Hook_Standard</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.2, 1.2)</drawSize>
+      <!-- Rouge incandescent, couleur du Carburant Vital -->
+    </graphicData>
+
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Mass>1.5</Mass>
+      <MarketValue>0</MarketValue>      <!-- Invendable -->
+    </statBases>
+
+    <!-- Coût de craft : le Hook se "forge" depuis le Carburant Vital -->
+    <costList>
+      <Steel>50</Steel>
+    </costList>
+
+    <!-- Statistiques de combat -->
+    <tools>
+      <!-- Coup principal : taillade avec la pointe -->
+      <li>
+        <label>pointe</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>1.6</cooldownTime>
+        <armorPenetration>0.25</armorPenetration>
+      </li>
+      <!-- Coup secondaire : crochetage (tire la cible) -->
+      <li>
+        <label>crochet</label>
+        <capacities>
+          <li>Cut</li>
+          <li>Stab</li>
+        </capacities>
+        <power>18</power>
+        <cooldownTime>2.2</cooldownTime>
+        <armorPenetration>0.40</armorPenetration>
+      </li>
+    </tools>
+
+    <!-- Verbe principal -->
+
+    <!-- Lueur rouge faible : le Hook brille légèrement -->
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>1.0</glowRadius>
+        <glowColor>(200, 30, 15, 0)</glowColor>
+      </li>
+    </comps>
+
+    <!-- Slot : arme principale (main droite) -->
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Spacer</techLevel>
+  </ThingDef>
+
+
+  <!-- ===================================================================
+       ARME : Hook Lourd (variante Sweeper-Lourd, image 1)
+       Deux grandes faucilles incandescentes.
+       Plus lent mais dégâts massifs, portée légèrement plus longue.
+  =================================================================== -->
+
+  <ThingDef ParentName="PM_SweeperWeaponBase">
+    <defName>PM_Hook_Heavy</defName>
+    <label>Hook lourd</label>
+    <description>Une version plus massive du Hook standard, forgée par les Sweepers qui ont accumulé suffisamment de Carburant Vital pour cristalliser une lame plus dense. Les doubles crochets décrivent des arcs larges qui peuvent toucher plusieurs cibles. La chaleur qui s'en dégage est perceptible à distance.</description>
+
+    <graphicData>
+      <texPath>Things/Item/Equipment/PM_Hook/PM_Hook_Heavy</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.5, 1.5)</drawSize>
+    </graphicData>
+
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Mass>4.0</Mass>
+      <MarketValue>0</MarketValue>
+    </statBases>
+
+    <costList>
+      <Steel>90</Steel>
+    </costList>
+
+    <tools>
+      <li>
+        <label>arc de lame</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>22</power>
+        <cooldownTime>2.4</cooldownTime>
+        <armorPenetration>0.35</armorPenetration>
+      </li>
+      <li>
+        <label>crochet massif</label>
+        <capacities>
+          <li>Cut</li>
+          <li>Stab</li>
+        </capacities>
+        <power>30</power>
+        <cooldownTime>3.2</cooldownTime>
+        <armorPenetration>0.55</armorPenetration>
+        <!-- Knockback : le Hook lourd projette les cibles -->
+      </li>
+    </tools>
+
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>1.5</glowRadius>
+        <glowColor>(220, 40, 20, 0)</glowColor>
+      </li>
+    </comps>
+
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Spacer</techLevel>
+  </ThingDef>
+
+
+  <!-- ===================================================================
+       RECETTE : Forger un Hook (ajoutée à la Mother)
+       Ces recettes complètent ce qui est défini dans recipeMaker ci-dessus.
+  =================================================================== -->
+
+</Defs>

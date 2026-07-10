@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- =====================================================================
+       FACTION : Union des Sweepers
+       Faction Outlander commerçante dont TOUS les membres sont des Sweepers
+       (xénotype PM_Sweeper forcé à 100%). Idéologie "Volonté de la Cité" et
+       marchandises Sweeper (carburant vital, cristalliseurs, armes, armures).
+  ===================================================================== -->
+  <FactionDef ParentName="OutlanderFactionBase">
+    <defName>PM_Faction_Sweeper</defName>
+    <label>union des Sweepers</label>
+    <description>Les Sweepers de la Cité qui se sont exilés jusqu'ici. Nettoyeurs des Backstreets, ils récupèrent tout ce qui traîne pour le détruire ou le réutiliser. Ils parlent une langue qui leur est propre, incompréhensible pour les non-Sweepers — et réciproquement. Sans un lexique de traduction, aucun échange n'est possible avec eux.</description>
+    <colorSpectrum>
+      <li>(0.55, 0.10, 0.08)</li>
+      <li>(0.75, 0.18, 0.12)</li>
+    </colorSpectrum>
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>15</configurationListOrderPriority>
+
+    <!-- Force le xénotype Sweeper sur TOUS les membres de la faction -->
+    <xenotypeSet Inherit="False">
+      <xenotypeChances Inherit="False">
+        <PM_Sweeper>1.0</PM_Sweeper>
+      </xenotypeChances>
+    </xenotypeSet>
+
+    <!-- Idéologie "Volonté de la Cité" : meme Sweeper + structure The City -->
+    <requiredMemes Inherit="False">
+      <li MayRequire="Ludeon.RimWorld.Ideology">PM_Meme_Sweeper</li>
+    </requiredMemes>
+    <structureMemeWeights Inherit="False">
+      <Structure_TheCity MayRequire="Ludeon.RimWorld.Ideology">10</Structure_TheCity>
+    </structureMemeWeights>
+    <allowedCultures Inherit="False">
+      <li>PM_Culture_Sweeper</li>
+    </allowedCultures>
+
+    <!-- Marchandises Sweeper (override des traders Outlander hérités) -->
+    <caravanTraderKinds Inherit="False">
+      <li>PM_Caravan_Sweeper</li>
+    </caravanTraderKinds>
+    <visitorTraderKinds Inherit="False">
+      <li>PM_Visitor_Sweeper</li>
+    </visitorTraderKinds>
+    <baseTraderKinds Inherit="False">
+      <li>PM_Base_Sweeper</li>
+    </baseTraderKinds>
+  </FactionDef>
+
+</Defs>

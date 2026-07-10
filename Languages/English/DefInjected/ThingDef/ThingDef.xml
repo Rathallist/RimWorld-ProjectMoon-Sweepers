@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PM_Mother.label>Mother</PM_Mother.label>
+  <PM_Mother.description>A pulsing incubator that produces new Sweepers from the Vital Fuel in the network. It can be augmented with modules to accelerate gestation, produce multiple Sweepers, or enhance their starting skills.</PM_Mother.description>
+  <PM_Liquidifier.label>Liquidifier</PM_Liquidifier.label>
+  <PM_Liquidifier.description>A machine that processes organic matter into Vital Fuel and injects it into the network. The heart of a Sweeper colony's fuel supply.</PM_Liquidifier.description>
+  <PM_Crystallizer.label>Crystallizer</PM_Crystallizer.label>
+  <PM_Crystallizer.description>A workbench that crystallizes Vital Fuel drawn from the network into solid weapons and implants. Draws its fuel directly from the pipe network.</PM_Crystallizer.description>
+  <PM_Module_Gestation.label>gestation module</PM_Module_Gestation.label>
+  <PM_Module_Gestation.description>A module that speeds up the Mother's cycles. Each module reduces the fuel needed per cycle, producing Sweepers faster. Stacks up to 3 on a single Mother.</PM_Module_Gestation.description>
+  <PM_Module_Multiplication.label>multiplication module</PM_Module_Multiplication.label>
+  <PM_Module_Multiplication.description>A module that lets the Mother produce several Sweepers per cycle. Each module adds one extra Sweeper produced per complete cycle. Stacks up to 3 on a single Mother.</PM_Module_Multiplication.description>
+  <PM_Module_Enhancement.label>enhancement module</PM_Module_Enhancement.label>
+  <PM_Module_Enhancement.description>A module that refines the injected vital fuel, producing Sweepers with superior abilities. Each module raises the starting skills of produced Sweepers. Stacks up to 3 on a single Mother.</PM_Module_Enhancement.description>
+  <PM_BloodPipe.label>vital fuel pipe</PM_BloodPipe.label>
+  <PM_BloodPipe.description>A conduit that carries Vital Fuel between buildings. Connects Liquidifiers, reservoirs, taps and the Mother into a single network.</PM_BloodPipe.description>
+  <PM_BloodReservoir.label>vital fuel reservoir</PM_BloodReservoir.label>
+  <PM_BloodReservoir.description>A tank that stores the network's Vital Fuel. The more you build, the higher the network's total capacity.</PM_BloodReservoir.description>
+  <PM_BloodTap.label>vital fuel tap</PM_BloodTap.label>
+  <PM_BloodTap.description>A feeding point where Sweepers can recharge their internal Vital Fuel by drawing from the network. Essential to keep your Sweepers alive without combat.</PM_BloodTap.description>
+  <PM_RedLiquidBlood.label>vital fuel</PM_RedLiquidBlood.label>
+  <PM_RedLiquidBlood.description>A milky white substance that flows from a wounded Sweeper. It is not blood — it is the very matter that makes up its being.</PM_RedLiquidBlood.description>
+  <PM_RedLiquidResource.label>vital fuel</PM_RedLiquidResource.label>
+  <PM_RedLiquidResource.description>A sealed container of Vital Fuel, the substance that makes up Sweepers. Can be used by the Mother building to create new Sweepers, or injected directly into a Sweeper via a Liquidifier.</PM_RedLiquidResource.description>
+  <PM_BackTank_Small.label>small back tank</PM_BackTank_Small.label>
+  <PM_BackTank_Small.description>A small back-mounted tank that increases the amount of vital fuel a Sweeper can hold. Light but modest capacity.</PM_BackTank_Small.description>
+  <PM_BackTank_Medium.label>back tank</PM_BackTank_Medium.label>
+  <PM_BackTank_Medium.description>A standard-sized back tank. A good compromise between vital fuel capacity and weight.</PM_BackTank_Medium.description>
+  <PM_BackTank_Large.label>large back tank</PM_BackTank_Large.label>
+  <PM_BackTank_Large.description>A massive back tank that doubles vital fuel capacity. Heavy and bulky, but allows holding out far longer between recharges.</PM_BackTank_Large.description>
+  <PM_Armor_SweeperHelm.label>Sweeper helmet</PM_Armor_SweeperHelm.label>
+  <PM_Armor_SweeperHelm.description>An angular helmet with blue-gray metal plates, forged to protect the Sweeper's "head" — actually the upper consciousness node of its liquid body. A single red lens replaces the eye. The joints are sealed with crystallized Vital Fuel.</PM_Armor_SweeperHelm.description>
+  <PM_Armor_SweeperChest.label>Sweeper breastplate</PM_Armor_SweeperChest.label>
+  <PM_Armor_SweeperChest.description>A massive breastplate made of several interlocking hexagonal plates, fastened with metal bolts. The integrated pauldrons protect the Sweeper's "shoulders". Faint cracks in the metal sometimes reveal the red glow of Vital Fuel beneath.</PM_Armor_SweeperChest.description>
+  <PM_Armor_SweeperLegs.label>Sweeper leggings</PM_Armor_SweeperLegs.label>
+  <PM_Armor_SweeperLegs.description>Segmented metal shin and knee guards, articulated to allow the Sweeper's rapid movement. Each segment is independent, letting damaged pieces be replaced individually. The lower fastenings are reinforced with crystallized Vital Fuel to absorb ground vibrations.</PM_Armor_SweeperLegs.description>
+  <PM_Armor_SweeperArms.label>Sweeper bracers</PM_Armor_SweeperArms.label>
+  <PM_Armor_SweeperArms.description>Segmented forearm guards that protect the Sweeper's limbs while allowing maximum freedom of movement to wield Hooks. The elbow joints are reinforced with a more flexible alloy so as not to hinder blade rotations.</PM_Armor_SweeperArms.description>
+  <PM_Armor_SweeperHeavyChest.label>Sweeper heavy breastplate</PM_Armor_SweeperHeavyChest.label>
+  <PM_Armor_SweeperHeavyChest.description>A reinforced version of the standard breastplate, with a larger integrated back tank and doubled front plates. The tank visible on the back can hold more Vital Fuel, letting the heavy Sweeper stay in combat longer without resupplying. Extremely heavy — reserved for Sweepers of strong constitution.</PM_Armor_SweeperHeavyChest.description>
+  <PM_SweeperFragment.label>Sweeper fragment</PM_SweeperFragment.label>
+  <PM_SweeperFragment.description>A shard of black armor still soaked in crystallized vital fuel. The red veins pulse faintly. Study it at a research bench to unlock vital fuel research.</PM_SweeperFragment.description>
+  <PM_EmergencyCrystallizer.label>emergency crystallizer</PM_EmergencyCrystallizer.label>
+  <PM_EmergencyCrystallizer.description>An implant of crystallized vital fuel. Once grafted onto a body part, it activates automatically in case of severe bleeding: it cauterizes the wound then shatters. Single use.</PM_EmergencyCrystallizer.description>
+  <PM_Hook_Standard.label>Hook</PM_Hook_Standard.label>
+  <PM_Hook_Standard.description>A sickle-shaped hook forged from crystallized Vital Fuel. The blade vibrates slightly with an internal heat. It is not truly a manufactured weapon — the Sweeper makes it emerge from its own body. Each blow tears organic matter from the target and converts it into Vital Fuel for the wielder.</PM_Hook_Standard.description>
+  <PM_Hook_Heavy.label>heavy Hook</PM_Hook_Heavy.label>
+  <PM_Hook_Heavy.description>A more massive version of the standard Hook, forged by Sweepers who have accumulated enough Vital Fuel to crystallize a denser blade. The double hooks trace wide arcs that can strike multiple targets. The heat it gives off is noticeable from a distance.</PM_Hook_Heavy.description>
+  <PM_SweeperCore.label>Sweeper node</PM_SweeperCore.label>
+  <PM_SweeperCore.description>A dense sphere of crystallized Vital Fuel, containing the "seed" of a new Sweeper. It must be placed in an active Mother to complete incubation, or activated manually by an existing Sweeper.</PM_SweeperCore.description>
+
+</LanguageData>

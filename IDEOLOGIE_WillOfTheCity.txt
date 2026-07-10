@@ -1,0 +1,47 @@
+GUIDE : Idéologie "Will of the City" (Volonté de la Cité)
+=========================================================
+
+LORE
+----
+La Cité est une métropole incommensurable gouvernée par des mégacorporations.
+Chaque district a la taille d'un pays et est dirigé par une Wing — une 
+corporation surpuissante maîtrisant la Singularité, une technologie quasi 
+surnaturelle. Il existe un district par lettre de l'alphabet. Les trois Wings 
+les plus puissantes sont The Head (district A), The Eyes (district B) et 
+The Claw (district C). The Head décrète les règles de la Cité et ordonne aux 
+Sweepers de nettoyer les Backstreets durant la Nuit.
+
+Les Sweepers ne nettoient pas avec des outils ordinaires : ils récupèrent tout
+ce qui traîne (vivant ou non) et le ramènent chez eux pour le détruire ou le 
+réutiliser.
+
+ASSEMBLAGE DANS LE CRÉATEUR D'IDÉOLOGIE (mode complexe)
+-------------------------------------------------------
+STRUCTURE : La Cité (PM_Structure_TheCity)
+  → apparaît dans la liste des structures, comme Animist/Theist/etc.
+
+MEME : Sweeper (PM_Meme_Sweeper)
+
+CULTURE : Sweeper (PM_Culture_Sweeper)
+  → noms familiaux : Frère, Oncle, Voisin, Cousin
+
+PRECEPTS :
+  - Saleté : abhorrente (PM_Precept_FilthAbhorrent) [auto avec le meme]
+  Via "Add precept..." (bouton en haut à droite), ajoute les precepts vanilla :
+  - Bâtiments : intérieur préféré
+  - Corps : on s'en fiche (Corpses: Don't Care)
+  - Éclairage : darklight préféré
+  - Combat dans le noir : préféré
+
+RÔLES (via "Add role...") :
+  - Patron du quartier (Leader)
+  - Coordinateur de balayage (Specialist, bonus nettoyage)
+  - Gardien (Moral guide)
+
+BONUS DE MOOD :
+  - +3 quand un croyant nettoie de la saleté
+  - +4 quand un croyant démantèle un bâtiment
+
+Les precepts vanilla (intérieur, corps, darklight, combat sombre) ne sont pas
+forcés par le meme pour éviter les erreurs de noms internes : ajoute-les 
+manuellement via "Add precept...". Ils existent tous dans le jeu de base.

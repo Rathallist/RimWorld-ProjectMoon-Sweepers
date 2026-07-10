@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <MemeDef MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>Structure_TheCity</defName>
+    <label>la cité</label>
+    <description>Une cité incommensurable, gouvernée par des mégacorporations. Chaque district a la taille d'un pays et est dirigé par une Wing — une corporation surpuissante maîtrisant une technologie quasi surnaturelle, la Singularité. Il existe un district par lettre de l'alphabet. Les trois Wings les plus puissantes sont The Head (district A), qui décrète et impose les règles de la Cité, The Eyes (district B) et The Claw (district C). C'est The Head qui ordonne aux Sweepers de nettoyer les Backstreets durant la Nuit.</description>
+    <category>Structure</category>
+    <iconPath>UI/Memes/PM_Structure_TheCity</iconPath>
+    <impact>0</impact>
+    <worshipRoomLabel>district</worshipRoomLabel>
+    <randomizationSelectionWeightFactor>3</randomizationSelectionWeightFactor>
+    <deityCount>0</deityCount>
+    <generalRules>
+      <rulesStrings>
+        <li>memeHyphenPrefix->urb</li>
+        <li>memeLeaderNoun->wing</li>
+        <li>memeLeaderNoun->boss</li>
+        <li>memeLeaderAdjective->corporate</li>
+        <li>memeLeaderAdjective->urban</li>
+        <li>memeMoralist->guardian</li>
+        <li>memeMoralist->overseer</li>
+        <li>memeConcept->the City</li>
+        <li>memeConcept->the Backstreets</li>
+        <li>memeConcept->the Singularity</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <patterns>
+        <li>
+          <def>IdeologicalFounder</def>
+          <weight>1</weight>
+        </li>
+        <li>
+          <def>IdeologicalLesson</def>
+          <weight>3</weight>
+        </li>
+      </patterns>
+      <constants>
+        <li><key>structure_ideological</key><value>true</value></li>
+      </constants>
+    </descriptionMaker>
+    <symbolPacks>
+      <li>
+        <ideoName>Urbanism</ideoName>
+        <theme>urbanity</theme>
+        <adjective>urban</adjective>
+        <member>citizen</member>
+      </li>
+      <li>
+        <ideoName>Corporatism</ideoName>
+        <theme>corporation</theme>
+        <adjective>corporate</adjective>
+        <member>corporate</member>
+      </li>
+    </symbolPacks>
+  </MemeDef>
+
+</Defs>

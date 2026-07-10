@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ===================================================================
+       THOUGHTS : Réactions des colons aux activités Sweeper
+  =================================================================== -->
+
+  <!-- Voir un cadavre liquéfié (pour les non-Sweepers) -->
+  <ThoughtDef>
+    <defName>PM_WitnessedLiquefaction</defName>
+    <label>a vu liquéfier un cadavre</label>
+    <durationDays>3</durationDays>
+    <stackLimit>3</stackLimit>
+    <stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>a vu liquéfier un cadavre</label>
+        <description>J'ai vu les Sweepers dissoudre un corps dans leur machine. C'est... difficile à regarder.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+    </stages>
+    <!-- Ne s'applique PAS aux Sweepers (gène PM_LiquidBody) -->
+  </ThoughtDef>
+
+  <!-- Un Sweeper vient de recharger son liquide (mood positif pour Sweeper) -->
+  <ThoughtDef>
+    <defName>PM_LiquidReplenished</defName>
+    <label>carburant vital rechargé</label>
+    <durationDays>0.5</durationDays>
+    <stages>
+      <li>
+        <label>carburant vital rechargé</label>
+        <description>Mon réservoir est plein. Je fonctionne à pleine capacité.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Sweeper en carence de liquide -->
+  <ThoughtDef>
+    <defName>PM_LiquidLow</defName>
+    <label>carburant vital faible</label>
+    <durationDays>0</durationDays>  <!-- Dure tant que le need est bas -->
+    <stages>
+      <li>
+        <label>carburant vital critique</label>
+        <description>Mon réservoir est presque à sec. Je dois trouver de la matière organique rapidement.</description>
+        <baseMoodEffect>-12</baseMoodEffect>
+      </li>
+      <li>
+        <label>carburant vital faible</label>
+        <description>Mon niveau de carburant vital baisse. Je dois me ravitailler bientôt.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Nouveau Sweeper incubé avec succès -->
+  <ThoughtDef>
+    <defName>PM_NewSweeperBorn</defName>
+    <label>nouveau Sweeper incubé</label>
+    <durationDays>5</durationDays>
+    <stages>
+      <li>
+        <label>nouveau Sweeper parmi nous</label>
+        <description>La Mother a produit un nouveau Sweeper. Notre groupe s'agrandit.</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+
+  <!-- Sweeper exposé à la lumière directe (remplace le trait Wimp) -->
+  <ThoughtDef>
+    <defName>PM_DaylightDiscomfort</defName>
+    <label>lumière diurne</label>
+    <durationDays>0</durationDays>
+    <stages>
+      <li>
+        <label>capteurs surchargés</label>
+        <description>La lumière du soleil surcharge mes capteurs. Je fonctionne à capacité réduite.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

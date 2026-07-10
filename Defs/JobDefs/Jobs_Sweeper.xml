@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <JobDef>
+    <defName>PM_DrinkFromTap</defName>
+    <driverClass>ProjectMoonSweepers.JobDriver_DrinkFromTap</driverClass>
+    <reportString>s'alimente en Carburant Vital.</reportString>
+    <casualInterruptible>true</casualInterruptible>
+  </JobDef>
+
+
+  <JobDef>
+    <defName>PM_FeedFuelToSweeper</defName>
+    <driverClass>ProjectMoonSweepers.JobDriver_FeedFuel</driverClass>
+    <reportString>donne du carburant vital à TargetB.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+
+
+  <JobDef>
+    <defName>PM_FeedFuelFromTap</defName>
+    <driverClass>ProjectMoonSweepers.JobDriver_FeedFuelFromTap</driverClass>
+    <reportString>transporte du carburant vital vers TargetB.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+
+</Defs>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <NeedDef>
+    <defName>PM_RedLiquid</defName>
+    <label>carburant vital</label>
+    <description>Le liquide interne qui maintient ce Sweeper en vie et lui permet de fonctionner. Sans lui, le Sweeper est paralysé. Il peut être rechargé via un Hook sur des entités organiques, ou via un Liquidifier.</description>
+    <needClass>ProjectMoonSweepers.Need_RedLiquid</needClass>
+    <colonistAndPrisonersOnly>false</colonistAndPrisonersOnly>
+    <showForCaravanMembers>true</showForCaravanMembers>
+    <listPriority>25</listPriority>
+    <baseLevel>0.8</baseLevel>
+    <showOnNeedList>true</showOnNeedList>
+    <showBar>true</showBar>
+    <barColor>(0.85, 0.12, 0.10)</barColor>
+
+    <threshPercents>
+      <li>0.3</li>
+      <li>0.1</li>
+    </threshPercents>
+  </NeedDef>
+
+</Defs>

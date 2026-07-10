@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- =====================================================================
+       THING DEF : Carburant Vital (comme fluide corporel)
+       Remplace le sang des Sweepers visuellement.
+       Des flaques de carburant vital apparaissent quand un Sweeper est blessé.
+  ===================================================================== -->
+
+  <ThingDef>
+    <defName>PM_RedLiquidBlood</defName>
+    <thingClass>Filth</thingClass>
+    <category>Filth</category>
+    <label>carburant vital</label>
+    <description>Une substance blanche laiteuse qui s'écoule d'un Sweeper blessé. Ce n'est pas du sang — c'est la matière même qui compose son être.</description>
+
+    <graphicData>
+      <texPath>Things/Filth/PM_RedLiquidBlood</texPath>   <!-- Utilise la texture sang vanilla pour l'instant -->
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(220, 40, 30)</color>           <!-- Teinte bleu-blanc -->
+    </graphicData>
+
+    <filth>
+      <cleaningWorkToReduceThickness>20</cleaningWorkToReduceThickness>
+    </filth>
+  </ThingDef>
+
+  <!-- =====================================================================
+       THING DEF : Carburant Vital (comme ressource craftable / stockable)
+       C'est la forme "item" du liquide, utilisée par la Mother et le Liquidifier.
+  ===================================================================== -->
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>PM_RedLiquidResource</defName>
+    <label>carburant vital</label>
+    <description>Un contenant hermétique de Carburant Vital, la substance qui compose les Sweepers. Peut être utilisé par le bâtiment Mother pour créer de nouveaux Sweepers, ou injecté directement dans un Sweeper via un Liquidifier.</description>
+
+    <graphicData>
+      <texPath>Things/Item/Resource/PM_RedLiquid</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(200, 30, 20)</color>
+    </graphicData>
+
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>15</MarketValue>
+      <Mass>0.5</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+
+    <stackLimit>75</stackLimit>
+    <thingCategories>
+      <li>PM_SweeperResources</li>
+    </thingCategories>
+
+    <!-- Catégorie de ressources Sweeper -->
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+  </ThingDef>
+
+  <!-- Catégorie d'item pour les ressources Sweeper -->
+  <ThingCategoryDef>
+    <defName>PM_SweeperResources</defName>
+    <label>ressources Sweeper</label>
+    <parent>Items</parent>
+  </ThingCategoryDef>
+
+</Defs>

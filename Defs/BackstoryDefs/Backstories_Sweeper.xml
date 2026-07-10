@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- =====================================================================
+       BACKSTORIES DES SWEEPERS PRODUITS PAR LA MOTHER
+       Deux backstories (enfance + âge adulte) donnant de faibles bonus en
+       exploitation minière et corps-à-corps. Assignées par code à la naissance.
+  ===================================================================== -->
+
+  <!-- ENFANCE -->
+  <BackstoryDef>
+    <defName>PM_Backstory_SweeperChild</defName>
+    <title>rejeton de la Mother</title>
+    <titleShort>rejeton</titleShort>
+    <description>[PAWN_nameDef] a émergé de la Mother, pleinement formé, façonné par le carburant vital. Là où d'autres ont eu une enfance, [PAWN_pronoun] n'a connu que la pulsation rouge de l'incubateur et l'appel du balayage.</description>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Mining>2</Mining>
+      <Melee>2</Melee>
+    </skillGains>
+    <spawnCategories>
+      <li>PM_Sweeper</li>
+    </spawnCategories>
+  </BackstoryDef>
+
+  <!-- ÂGE ADULTE -->
+  <BackstoryDef>
+    <defName>PM_Backstory_SweeperAdult</defName>
+    <title>balayeur des Backstreets</title>
+    <titleShort>balayeur</titleShort>
+    <description>[PAWN_nameDef] a été forgé pour un seul but : nettoyer. Ses membres connaissent d'instinct le poids d'un Hook et l'effort du démantèlement, hérités du carburant vital dont [PAWN_pronoun] est fait.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Mining>2</Mining>
+      <Melee>2</Melee>
+    </skillGains>
+    <spawnCategories>
+      <li>PM_Sweeper</li>
+    </spawnCategories>
+  </BackstoryDef>
+
+</Defs>

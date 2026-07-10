@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Implant cristalliseur d'urgence : posé chirurgicalement sur une partie
+       du corps. S'active automatiquement en cas de forte hémorragie, stoppe
+       le saignement, puis se brise (devient inactif). -->
+  <HediffDef>
+    <defName>PM_CrystallizerImplant</defName>
+    <label>cristalliseur d'urgence</label>
+    <labelNoun>un cristalliseur d'urgence</labelNoun>
+    <description>Un implant de carburant vital cristallisé greffé sur une partie du corps. Lorsqu'une forte hémorragie est détectée, il libère sa charge pour cautériser instantanément la plaie, puis se brise.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <countsAsAddedPartOrImplant>true</countsAsAddedPartOrImplant>
+    <isBad>false</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="ProjectMoonSweepers.HediffCompProperties_EmergencyCrystallizer">
+        <bleedRateTrigger>0.5</bleedRateTrigger>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>actif</label>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- Version "brisée" après activation : ne fait plus rien, doit être remplacée -->
+  <HediffDef>
+    <defName>PM_CrystallizerImplant_Spent</defName>
+    <label>cristalliseur brisé</label>
+    <labelNoun>un cristalliseur brisé</labelNoun>
+    <description>Un cristalliseur d'urgence déjà déclenché. Sa charge est épuisée — il faut le remplacer chirurgicalement pour retrouver une protection.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <countsAsAddedPartOrImplant>true</countsAsAddedPartOrImplant>
+    <isBad>false</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <stages>
+      <li>
+        <label>brisé</label>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

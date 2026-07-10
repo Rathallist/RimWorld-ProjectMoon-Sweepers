@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <WorkGiverDef>
+    <defName>PM_DrinkFromTap</defName>
+    <label>boire au robinet de carburant vital</label>
+    <giverClass>ProjectMoonSweepers.WorkGiver_DrinkFromTap</giverClass>
+    <workType>PM_Sustenance</workType>
+    <priorityInType>100</priorityInType>
+    <verb>s'alimenter</verb>
+    <gerund>s'alimentant en Carburant Vital</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustenanceOverHappiness>true</prioritizeSustenanceOverHappiness>
+  </WorkGiverDef>
+
+
+  <!-- WorkGiver pour faire les bills au Cristalliseur -->
+  <WorkGiverDef>
+    <defName>PM_DoBillsCrystallizer</defName>
+    <label>faire les bills du cristalliseur</label>
+    <giverClass>RimWorld.WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>96</priorityInType>
+    <fixedBillGiverDefs>
+      <li>PM_Crystallizer</li>
+    </fixedBillGiverDefs>
+    <verb>travailler</verb>
+    <gerund>travaillant au cristalliseur</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+</Defs>

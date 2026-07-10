@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Recettes EXPLICITES des Hooks, SANS unfinishedThingDef (évite le crash
+       CalculateDominantIngredient). Steel comme ingrédient haulé.
+       Le carburant vital est consommé du réseau par le CompCrystallizerFuel. -->
+
+  <RecipeDef>
+    <defName>PM_Make_Hook_Standard</defName>
+    <label>fabriquer un Hook (40 carburant vital)</label>
+    <description>Forge un Hook standard. Consomme 20 acier et 40 carburant vital prélevé du réseau.</description>
+    <jobString>Fabrication d'un Hook.</jobString>
+    <workAmount>800</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <PM_Hook_Standard>1</PM_Hook_Standard>
+    </products>
+    <skillRequirements>
+      <Crafting>4</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>PM_Crystallizer</li>
+    </recipeUsers>
+    <researchPrerequisite>PM_Research_SweeperWeapons</researchPrerequisite>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>PM_Make_Hook_Heavy</defName>
+    <label>fabriquer un Hook lourd (70 carburant vital)</label>
+    <description>Forge un Hook lourd à double crochet. Consomme 35 acier et 70 carburant vital prélevé du réseau.</description>
+    <jobString>Fabrication d'un Hook lourd.</jobString>
+    <workAmount>1600</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>35</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <PM_Hook_Heavy>1</PM_Hook_Heavy>
+    </products>
+    <skillRequirements>
+      <Crafting>6</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>PM_Crystallizer</li>
+    </recipeUsers>
+    <researchPrerequisite>PM_Research_SweeperWeapons</researchPrerequisite>
+  </RecipeDef>
+
+</Defs>

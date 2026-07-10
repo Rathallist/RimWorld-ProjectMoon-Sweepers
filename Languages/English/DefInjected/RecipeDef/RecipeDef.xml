@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PM_Make_Hook_Standard.label>make a Hook (40 vital fuel)</PM_Make_Hook_Standard.label>
+  <PM_Make_Hook_Standard.description>Forge a standard Hook. Consumes 20 steel and 40 vital fuel drawn from the network.</PM_Make_Hook_Standard.description>
+  <PM_Make_Hook_Standard.jobString>Making a Hook.</PM_Make_Hook_Standard.jobString>
+  <PM_Make_Hook_Heavy.label>make a heavy Hook (70 vital fuel)</PM_Make_Hook_Heavy.label>
+  <PM_Make_Hook_Heavy.description>Forge a heavy double-hooked Hook. Consumes 35 steel and 70 vital fuel drawn from the network.</PM_Make_Hook_Heavy.description>
+  <PM_Make_Hook_Heavy.jobString>Making a heavy Hook.</PM_Make_Hook_Heavy.jobString>
+  <PM_Surgery_InstallCrystallizer.label>install emergency crystallizer</PM_Surgery_InstallCrystallizer.label>
+  <PM_Surgery_InstallCrystallizer.description>Grafts an emergency crystallizer onto a body part. Will activate in case of severe bleeding.</PM_Surgery_InstallCrystallizer.description>
+  <PM_Surgery_InstallCrystallizer.jobString>Installing an emergency crystallizer.</PM_Surgery_InstallCrystallizer.jobString>
+
+</LanguageData>

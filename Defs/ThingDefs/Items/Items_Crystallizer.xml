@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="BodyPartBase">
+    <defName>PM_EmergencyCrystallizer</defName>
+    <label>cristalliseur d'urgence</label>
+    <description>Un implant de carburant vital cristallisé. Une fois greffé sur une partie du corps, il s'active automatiquement en cas de forte hémorragie : il cautérise la plaie puis se brise. À usage unique.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>PM_Surgery_InstallCrystallizer</RecipeDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/PM_EmergencyCrystallizer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>320</MarketValue>
+      <Mass>0.5</Mass>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <thingCategories>
+      <li>BodyPartsIndustrial</li>
+    </thingCategories>
+    <recipeMaker>
+      <researchPrerequisite>PM_Research_SweeperAugments</researchPrerequisite>
+      <recipeUsers>
+        <li>PM_Crystallizer</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <Steel>20</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+  </ThingDef>
+
+</Defs>

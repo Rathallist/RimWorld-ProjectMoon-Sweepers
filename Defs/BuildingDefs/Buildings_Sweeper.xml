@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ===================================================================
+       BASE ABSTRAITE : Building Sweeper
+       Partagée entre Mother et Liquidifier.
+  =================================================================== -->
+
+  <ThingDef Name="PM_SweeperBuildingBase" Abstract="True" ParentName="BuildingBase">
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <blockWind>false</blockWind>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.5</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <designationCategory>Production</designationCategory>
+    <building>
+      <isInert>false</isInert>
+    </building>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <Flammability>0.0</Flammability>   <!-- Métal, ignifugé -->
+      <WorkToBuild>4000</WorkToBuild>
+      <Mass>80</Mass>
+      <Beauty>-5</Beauty>               <!-- Ça fait peur à regarder -->
+    </statBases>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>150</costStuffCount>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+  </ThingDef>
+
+  <!-- ===================================================================
+       BUILDING : Mother
+       Produit des nouveaux Sweepers à partir de Carburant Vital.
+       - Taille : 3x3
+       - Nécessite de l'électricité
+       - Interface : bill de fabrication (comme une table de travail)
+       - Input  : PM_RedLiquidResource (quantité importante)
+       - Output : nouveau pawn Sweeper
+  =================================================================== -->
+
+  <ThingDef ParentName="PM_SweeperBuildingBase">
+    <defName>PM_Mother</defName>
+    <madeFromStuff>false</madeFromStuff>
+    <stuffCategories Inherit="False" />
+    <label>Mother</label>
+    <description>Un imposant incubateur organo-mécanique qui se nourrit de Carburant Vital pour fonctionner. La Mother pulse d'une lueur rouge dans l'obscurité, ses canalisations internes bruissant d'une activité étrange. Chaque Sweeper produit émerge pleinement formé, prêt au combat.\n\nConsomme du Carburant Vital en continu — sans apport régulier, elle cesse de fonctionner. Un seul Sweeper peut y travailler à la fois. Peut être démontée et repositionnée à volonté.</description>
+
+    <!-- === MINIFIABLE : la Mother peut être emportée et reposée ===
+         Crée automatiquement un item "Mother (non installée)"
+         stockable, transportable, et plaçable n'importe où.
+         Utilisé dans le scénario pour spawner la Mother dans l'inventaire. -->
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsProduction</li>
+    </thingCategories>
+
+    <graphicData>
+      <texPath>Things/Building/PM_Mother</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3, 3)</drawSize>
+      <color>(30, 20, 20)</color>        <!-- Noir avec teinte rouge sous-jacente -->
+      <shadowData>
+        <volume>(2.8, 1.0, 2.8)</volume>
+        <offset>(0, 0, -0.3)</offset>
+      </shadowData>
+    </graphicData>
+
+    <size>(3, 3)</size>
+    <tickerType>Normal</tickerType>
+
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <WorkToBuild>8000</WorkToBuild>
+      <Flammability>0.0</Flammability>
+      <Beauty>-15</Beauty>
+    </statBases>
+
+    <costList>
+      <Steel>200</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <PM_RedLiquidResource>30</PM_RedLiquidResource>  <!-- Amorçage initial -->
+    </costList>
+
+    <comps>
+      <!-- Production autonome de Sweeper via le réseau de carburant vital -->
+      <li Class="ProjectMoonSweepers.CompProperties_Mother">
+        <fuelToProduce>150</fuelToProduce>
+        <ticksToProduce>30000</ticksToProduce>
+        <fuelDrawPerTick>0.005</fuelDrawPerTick>
+      </li>
+      <!-- Effet de brillance rouge -->
+      <li Class="CompProperties_Glower">
+        <glowRadius>5</glowRadius>
+        <glowColor>(220, 30, 20, 0)</glowColor>
+      </li>
+      <li Class="ProjectMoonSweepers.CompProperties_PipeStubs"/>
+      <!-- Accepte les modules d'amélioration (facilities adjacentes) -->
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>PM_Module_Gestation</li>
+          <li>PM_Module_Multiplication</li>
+          <li>PM_Module_Enhancement</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+
+    <!-- Fonctionne comme une table de fabrication -->
+    <thingClass>ProjectMoonSweepers.Building_Mother</thingClass>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0, 0, -2)</interactionCellOffset>
+
+    <researchPrerequisites>
+      <li>PM_Research_SweeperTech</li>
+    </researchPrerequisites>
+
+    <!-- Seuls les Sweepers peuvent opérer la Mother -->
+    <building>
+    </building>
+  </ThingDef>
+
+  <!-- ===================================================================
+       BUILDING : Liquidifier
+       Convertit de la matière organique en Carburant Vital.
+       - Taille : 2x2
+       - Inputs : viande, organes, cadavres (via bill)
+       - Output : PM_RedLiquidResource
+       - Opéré par n'importe quel colon (pas besoin d'être Sweeper)
+  =================================================================== -->
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>PM_Liquidifier</defName>
+    <label>Liquidifier</label>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsProduction</li>
+    </thingCategories>
+    <description>Un broyeur organique qui décompose la matière vivante en Carburant Vital. Construisez des trémies adjacentes et déposez-y viande, organes ou cadavres : le Liquidifier les transforme automatiquement en Carburant Vital, stocké dans son réservoir interne. Récupérez le Carburant Vital quand le réservoir se remplit.</description>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Building/PM_Liquidifier</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2, 2)</drawSize>
+      <shadowData>
+        <volume>(1.8, 0.5, 1.8)</volume>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.5</fillPercent>
+    <size>(2, 2)</size>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>4000</WorkToBuild>
+      <Mass>25</Mass>
+      <Flammability>0.4</Flammability>
+    </statBases>
+    <costList>
+      <Steel>120</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <building>
+      <wantsHopperAdjacent>true</wantsHopperAdjacent>
+    </building>
+    <comps>
+      <li Class="ProjectMoonSweepers.CompProperties_Liquidifier">
+        <reservoirCapacity>100</reservoirCapacity>
+        <matterPerCycle>1</matterPerCycle>
+        <ticksPerCycle>250</ticksPerCycle>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(180, 20, 10, 0)</glowColor>
+      </li>
+      <li Class="ProjectMoonSweepers.CompProperties_PipeStubs"/>
+    </comps>
+    <designationCategory>Production</designationCategory>
+    <researchPrerequisites>
+      <li>PM_Research_VitalFuel</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+  </ThingDef>
+
+  <!-- ===================================================================
+       CRISTALLISEUR
+       Table de travail où les Sweepers forgent leurs Hooks à partir
+       de carburant vital cristallisé et d'acier.
+  =================================================================== -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>PM_Crystallizer</defName>
+    <label>cristalliseur</label>
+    <description>Une table où le carburant vital est cristallisé et façonné en armes. Les Sweepers y forgent leurs Hooks — des lames-crochets de matière durcie. Nécessite un Sweeper pour travailler.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <category>Building</category>
+    <!-- Minifiable : peut être désinstallé, transporté et reposé.
+         Le sprite miniature réutilise automatiquement le sprite du bâtiment. -->
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsProduction</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Building/PM_Crystallizer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3, 2)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>60</pathCost>
+    <fillPercent>0.5</fillPercent>
+    <size>(3, 1)</size>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>3000</WorkToBuild>
+      <Mass>30</Mass>
+      <Flammability>0.4</Flammability>
+    </statBases>
+    <costList>
+      <Steel>100</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="ProjectMoonSweepers.CompProperties_CrystallizerFuel"/>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(180, 25, 15, 0)</glowColor>
+      </li>
+      <li Class="ProjectMoonSweepers.CompProperties_PipeStubs"/>
+    </comps>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0, 0, -1)</interactionCellOffset>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <designationCategory>Production</designationCategory>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>PM_Research_SweeperWeapons</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+</Defs>

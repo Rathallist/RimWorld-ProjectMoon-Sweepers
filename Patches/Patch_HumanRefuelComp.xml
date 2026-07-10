@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Ajoute le comp de seuil de recharge au ThingDef Human.
+       Le gizmo ne s'affiche que pour les Sweepers colons (check dans le comp). -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="Human"]/comps</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="Human"]/comps</xpath>
+      <value>
+        <li Class="ProjectMoonSweepers.CompProperties_RefuelThreshold" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="Human"]</xpath>
+      <value>
+        <comps>
+          <li Class="ProjectMoonSweepers.CompProperties_RefuelThreshold" />
+        </comps>
+      </value>
+    </nomatch>
+  </Operation>
+
+</Patch>

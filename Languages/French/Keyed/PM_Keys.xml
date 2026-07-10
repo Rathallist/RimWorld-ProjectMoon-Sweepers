@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PM_Tap_NotConnected>Non connecté à un réseau</PM_Tap_NotConnected>
+  <PM_Tap_ExtractLabel>Extraire du carburant vital</PM_Tap_ExtractLabel>
+  <PM_Tap_ExtractDesc>Extrait 25 unités de carburant vital du réseau sous forme d'objet transportable.</PM_Tap_ExtractDesc>
+  <PM_Tap_NotEnough>Pas assez de carburant vital dans le réseau (25 requis).</PM_Tap_NotEnough>
+  <PM_Tap_FeedLabel>Alimenter un Sweeper</PM_Tap_FeedLabel>
+  <PM_Tap_FeedDesc>Désigne un Sweeper à terre ou alité pour qu'un colon vienne lui transférer du carburant vital depuis le réseau.</PM_Tap_FeedDesc>
+  <PM_Tap_NoColonist>Aucun colon disponible pour transférer le carburant.</PM_Tap_NoColonist>
+  <PM_Tap_DrinkEmpty>S'alimenter en carburant vital (réseau vide)</PM_Tap_DrinkEmpty>
+  <PM_Tap_DrinkFull>S'alimenter en carburant vital (déjà plein)</PM_Tap_DrinkFull>
+  <PM_Tap_DrinkUnreachable>S'alimenter en carburant vital (inaccessible)</PM_Tap_DrinkUnreachable>
+  <PM_Tap_Drink>S'alimenter en carburant vital</PM_Tap_Drink>
+  <PM_Lang_Garbled> ne comprend pas votre langue. (Recherchez « Traduction ».)</PM_Lang_Garbled>
+  <PM_Lang_Someone>l'interlocuteur</PM_Lang_Someone>
+
+  <PM_Need_StatusNormal>Normal</PM_Need_StatusNormal>
+  <PM_Need_StatusLow>Faible — malus actifs</PM_Need_StatusLow>
+  <PM_Need_StatusCritical>CRITIQUE — paralysé</PM_Need_StatusCritical>
+  <PM_Need_TipBody>Carburant Vital : {0} / {1} unités ({2}%)
+État : {3}
+
+Se recharge en frappant des entités organiques avec un Hook, ou via un réservoir de Carburant Vital.</PM_Need_TipBody>
+  <PM_Need_Dissolved>{0} s'est dissous — son Carburant Vital est épuisé.</PM_Need_Dissolved>
+
+</LanguageData>

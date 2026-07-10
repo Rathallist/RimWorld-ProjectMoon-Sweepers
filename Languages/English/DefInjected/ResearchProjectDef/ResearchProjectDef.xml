@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PM_Research_VitalFuel.label>vital fuel analysis</PM_Research_VitalFuel.label>
+  <PM_Research_VitalFuel.description>By studying a recovered Sweeper fragment, you uncover the secret of vital fuel — the red liquid that animates these entities. Unlocks the Liquidifier, pipes, reservoirs and taps.</PM_Research_VitalFuel.description>
+  <PM_Research_SweeperTech.label>Sweeper incubation</PM_Research_SweeperTech.label>
+  <PM_Research_SweeperTech.description>Master the incubation process that lets a Mother create new Sweepers from vital fuel. Unlocks the Mother.</PM_Research_SweeperTech.description>
+  <PM_Research_SweeperWeapons.label>Sweeper armament</PM_Research_SweeperWeapons.label>
+  <PM_Research_SweeperWeapons.description>Crystallize vital fuel into weapons. Unlocks the Crystallizer and Hooks.</PM_Research_SweeperWeapons.description>
+  <PM_Research_SweeperArmor.label>Sweeper armor</PM_Research_SweeperArmor.label>
+  <PM_Research_SweeperArmor.description>Forge the black armor characteristic of Sweepers. Unlocks the armor pieces at the Smithy.</PM_Research_SweeperArmor.description>
+  <PM_Research_SweeperAugments.label>Sweeper augmentations</PM_Research_SweeperAugments.label>
+  <PM_Research_SweeperAugments.description>Develop implants for your Sweepers: back tanks to store more vital fuel, and anti-hemorrhage emergency crystallizers.</PM_Research_SweeperAugments.description>
+  <PM_Research_Translation.label>translation</PM_Research_Translation.label>
+  <PM_Research_Translation.description>Sweepers speak a language of their own, incomprehensible to others — and vice versa. By compiling a lexicon from patient observation, you finally establish a linguistic bridge. Unlocks trade and eases recruitment between Sweepers and non-Sweepers.</PM_Research_Translation.description>
+  <PM_Research_MotherModules.label>advanced incubation modules</PM_Research_MotherModules.label>
+  <PM_Research_MotherModules.description>By dissecting the Mother's internal mechanisms, you learn to graft modules that alter its cycles: gestation acceleration, multiple production, and fuel refinement for more capable Sweepers. Unlocks the three Mother upgrade modules.</PM_Research_MotherModules.description>
+
+</LanguageData>

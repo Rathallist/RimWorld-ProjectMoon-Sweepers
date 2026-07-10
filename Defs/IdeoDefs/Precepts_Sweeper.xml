@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ============ ISSUE : propreté ============ -->
+  <IssueDef MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>PM_Issue_Cleanliness</defName>
+    <label>propreté</label>
+    <iconPath>UI/Issues/Cleanliness</iconPath>
+  </IssueDef>
+
+  <!-- Precept : saleté abhorrente (bonus nettoyage/démantèlement + malus saleté) -->
+  <PreceptDef MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>PM_Precept_FilthAbhorrent</defName>
+    <issue>PM_Issue_Cleanliness</issue>
+    <label>saleté abhorrente</label>
+    <description>La saleté est une offense. Un Sweeper digne nettoie sans relâche, et souffre en présence de crasse.</description>
+    <iconPath>UI/Issues/Cleanliness</iconPath>
+    <impact>Medium</impact>
+    <displayOrderInIssue>10</displayOrderInIssue>
+    <displayOrderInImpact>100</displayOrderInImpact>
+    <defaultSelectionWeight>1</defaultSelectionWeight>
+    <requiredMemes>
+      <li>PM_Meme_Sweeper</li>
+    </requiredMemes>
+    <comps>
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <eventDef>PM_CleanedFilth</eventDef>
+        <thought>PM_CleanedFilth_Mood</thought>
+      </li>
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <eventDef>PM_Deconstructed</eventDef>
+        <thought>PM_Deconstructed_Mood</thought>
+      </li>
+      <li Class="PreceptComp_SituationalThought">
+        <thought>PM_FilthAround_Mood</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+
+  <!-- ============ ISSUE : exposition diurne ============ -->
+  <IssueDef MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>PM_Issue_DaylightExposure</defName>
+    <label>exposition au jour</label>
+    <iconPath>UI/Issues/Cleanliness</iconPath>
+  </IssueDef>
+
+  <!-- Precept : œuvrer dans l'ombre (malus si dehors le jour) -->
+  <PreceptDef MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>PM_Precept_StayInShadows</defName>
+    <issue>PM_Issue_DaylightExposure</issue>
+    <label>œuvrer dans l'ombre</label>
+    <description>La place des Sweepers est dans l'ombre. La Cité les envoie nettoyer les Backstreets durant la Nuit ; s'exposer au jour est une transgression.</description>
+    <iconPath>UI/Issues/Cleanliness</iconPath>
+    <impact>Medium</impact>
+    <displayOrderInIssue>10</displayOrderInIssue>
+    <displayOrderInImpact>90</displayOrderInImpact>
+    <defaultSelectionWeight>1</defaultSelectionWeight>
+    <requiredMemes>
+      <li>PM_Meme_Sweeper</li>
+    </requiredMemes>
+    <comps>
+      <li Class="PreceptComp_SituationalThought">
+        <thought>PM_OutdoorsDaytime_Mood</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+
+</Defs>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PM_LiquidBody.label>liquid body</PM_LiquidBody.label>
+  <PM_LiquidBody.description>This carrier is not a biological being in the traditional sense — its body is composed of Vital Fuel, a glowing red liquid stored in a back tank, contained within a structural black suit. It does not need to eat, but must maintain its Vital Fuel level by absorbing organic matter. Its amorphous body absorbs impacts well, but is vulnerable to blades and points.</PM_LiquidBody.description>
+  <PM_Nightborn.label>nightborn</PM_Nightborn.label>
+  <PM_Nightborn.description>This Sweeper is perfectly adapted to darkness. Its senses are calibrated for dark environments. In broad daylight, its sensors are disrupted — reduced speed and efficiency. At night, it is in its element.</PM_Nightborn.description>
+  <PM_OrganicDrain.label>organic assimilation</PM_OrganicDrain.label>
+  <PM_OrganicDrain.description>With every blow struck on an organic entity with a Hook, this Sweeper absorbs part of the living matter and converts it into Vital Fuel. The larger the target, the greater the gain.</PM_OrganicDrain.description>
+  <PM_SuitBound.label>suit-body</PM_SuitBound.label>
+  <PM_SuitBound.description>This Sweeper has no biological body — its "skin" is actually a membrane of black matter that holds the Vital Fuel inside. Glowing red veins appear where internal pressure is highest: joints, torso, face. This body can never be "undressed" — it is what the Sweeper IS.</PM_SuitBound.description>
+
+</LanguageData>
